@@ -1,21 +1,18 @@
 .clients{
   height: 70vh;
-  margin-top: 2rem;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-flow: column nowrap;
+  @include flex-column-nowrap;
   justify-content: space-evenly;
+  position: relative;
 
 &__heading{
   @include heading;
-  font-size: 3rem;
+  margin-top: 1rem;
 }
 
 &__box{
   @include flex-row-wrap;
-  height: 80%;
-
+  flex-grow: 1;
+  padding: 1rem;
   &::after{
     top: -10vw;
     transform: translateX(-100%) rotate(90deg);
@@ -28,7 +25,7 @@
 
 &__image{
   @include flex-row-nowrap;
-  flex-basis: 40%;
+  flex-basis: 50%;
   height: 70%;
   position: relative;
 
@@ -50,16 +47,16 @@
   margin: 0 auto;
   @include flex-row-wrap;
   align-content: center;
-  height: 70%;
-  font-family: $secondary-font;
+  font-family: $primary-font;
   position: relative;
 
 }
 
 &__description{
-  line-height: 160%;
+  text-align: start;
+  font-size: 1.1rem;
+  line-height: 140%;
   font-style: italic;
-
 }
 
 &__role{
@@ -82,8 +79,8 @@
 
 &__mark{
   position: absolute;
-  top: 4rem;
-  left: -3.6rem;
+  top: -2rem;
+  left: -2rem;
   font-size: 2rem;
 }
 

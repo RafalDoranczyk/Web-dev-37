@@ -1,11 +1,10 @@
 .ourTeam{
-  height: 75vh;
-  margin-top: 2rem;
+  height: 50vh;
+  margin-top: 4rem;
   position: relative;
 
 &__heading{
   @include heading;
-  font-size: 3rem;
 }
 
 &__owlCarousel{
@@ -23,24 +22,33 @@
   transform: translateY(-50%);
   cursor: pointer;
   &--left{
-    left: 5%;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid $black;
-    border-top: 20px solid transparent;
+    left: 2%;
+    border-bottom: 3vh solid transparent;
+    border-right: 3vh solid $black;
+    border-top: 3vh solid transparent;
   }
   &--right{
-    right: 5%;
-    border-top: 20px solid transparent;
-    border-left: 20px solid $red;
-    border-bottom: 20px solid transparent;
+    right: 2%;
+    border-top: 3vh solid transparent;
+    border-left: 3vh solid $red;
+    border-bottom: 3vh solid transparent;
   }
 }
 
 &__box{
   margin: 0 auto;
-  height: 50vh;
-  width: 50vh;
+  height: 40vh;
+  width: 40vh;
   cursor: pointer;
+  position: relative;
+  font-family: $primary-font;
+  color: $pure-white;
+    img{
+      position: absolute;
+      top: 52.5%;
+      left: 48%;
+      transform: translate(-50%,-50%);
+    }
 }
 
 
@@ -53,17 +61,17 @@
   height: 10%;
   background-color: $black;
   opacity: .8;
-  color: $white;
-  span{
-   position: absolute;
-   top: 50%;
-   left: 0;
-   width: 100%;
-   text-align: center;
-   font-size: $secondary-font;
-   font-weight: 800;
-    transform: translateY(-50%) skew(-45deg);
-  }
+  font-weight: 700;
+    span{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 700;
+      transform: translateY(-55%) skew(-45deg);
+    } 
 }
 
 &__occupation{
@@ -81,10 +89,9 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: $secondary-font;
-    color: $white;
     font-style: italic;
-     transform: translateY(-50%) skew(-45deg);
+    font-size: 1.2rem;
+    transform: translateY(-50%) skew(-45deg);
   }
 }
 

@@ -1,7 +1,7 @@
 .services{
 font-family: $secondary-font;
 position: relative;
-margin-top: 12rem;
+margin-top: 8rem;
   &::after{
     top: 100%;
     left: 15%;
@@ -50,8 +50,8 @@ margin-top: 12rem;
 }
 
 &__subtitle{
-  color:$gray;
-  font-size: 2.2rem;
+  @include subtitle;
+
 }
 &__description{
   width: 70%;

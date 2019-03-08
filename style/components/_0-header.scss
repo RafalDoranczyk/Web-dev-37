@@ -1,6 +1,5 @@
 .header{
   height: 60vh;
-  font-family: $primary-font;
   color: $white;
 
   position: relative;
@@ -56,11 +55,11 @@
     font-size: 1.2rem;
     font-weight: 900;
     text-decoration: none;
-    color: $white;
     text-transform: uppercase;
   }
 
   &__logo{
+    font-family: $primary-font;
     @include flex-center;
     margin-left: 2rem;
     font-size: 2rem;
@@ -111,8 +110,9 @@
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%);
-  color: $black;
-  background-color: $white;
+  color: #242424;
+  background-color: $pure-white;
+
   &:hover{
     background-color: $black;
     color: $white;

@@ -1,7 +1,18 @@
-$primary-font: Lato, sans-serif;
-$secondary-font: Open Sans, sans-serif;
+@font-face{
+  font-family: 'PeaceSans';
+  src: url('../fonts/peace_sans.otf');
+}
 
+// FONTS
+$heading-font: 'PeaceSans';
+$primary-font: 'Open Sans', 'sans-serif';
+$secondary-font: 'Lato', sans-serif;
+
+// COLORS
+$heading: #494949;
 $white: #f5f5f5;
+$pure-white: #ffffff;
 $black: #000;
 $red:#bc2e3a;
 $gray:rgb(106, 106, 106);
+

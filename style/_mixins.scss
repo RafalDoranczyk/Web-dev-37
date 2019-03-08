@@ -37,27 +37,34 @@
   border-radius: 100px;
   font-weight: 700;
   background-color: #bc2e3a;
-  font-family: $primary-font;
+  font-family: $secondary-font;
   border: none;
   text-transform: uppercase;
   font-size: 1.5rem;
   transition: .4s;
   cursor: pointer;
+  color: $pure-white;
 }
 
 @mixin heading{
   text-align: center;
-  font-size: 4rem;
-  font-family: $primary-font;
-  color: #494949;
+  font-size: 3rem;
+  font-family: $heading-font;
+  color: $heading;
   font-weight: 900;
-  height: 10vh;
 }
 
 @mixin description{
   font-size: 1.4rem;
   line-height: 160%;
   text-align: center;
-  font-family: $secondary-font;
+  font-family: $primary-font;
   color: $gray;
+}
+
+@mixin subtitle{
+  color: #6f6f6e;
+  font-family: $primary-font;
+  font-weight: 900;
+  font-size: 2.2rem;
 }
