@@ -1,0 +1,60 @@
+.services{
+font-family: $secondary-font;
+position: relative;
+margin-top: 12rem;
+  &::after{
+    top: 100%;
+    left: 15%;
+    right: 15%;  
+    height: .1rem;
+    background-color:  $red;
+  }
+
+&__heading{
+  @include heading;
+}
+
+&__box{
+  margin: 0 auto;
+  height: 300vh;
+  width: 95%;
+  @include flex-column-nowrap;
+  justify-content: space-around;
+  &::after{
+    top: 50%;
+    left: 0%;
+    border-top: 10vw solid transparent;
+    border-left: 10vw solid $red;
+    border-bottom: 10vw solid transparent;
+  }
+}
+
+
+&__item{
+  flex-basis: 15%;
+  @include flex-column-nowrap;
+  justify-content: space-evenly;
+}
+&__iconBox{
+  height: 12vh;
+  width: 12vh;
+  border-radius: 50%;
+  background-color: $red;
+  position: relative;
+    img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+}
+
+&__subtitle{
+  color:$gray;
+  font-size: 2.2rem;
+}
+&__description{
+  width: 70%;
+  @include description;
+}
+}

@@ -1,0 +1,23 @@
+*,*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,*::before{
+  position: absolute;
+  content: '';
+}
+
+:root{
+  font-size: 10px;
+}
+
+body{
+  background-color: $white;
+}
+.wrapper{
+  width: 100%;
+  overflow: hidden;
+}
+

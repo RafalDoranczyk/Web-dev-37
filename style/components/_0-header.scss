@@ -1,0 +1,122 @@
+.header{
+  height: 60vh;
+  font-family: $primary-font;
+  color: $white;
+
+  position: relative;
+    &::after{
+      background: url('../assets/banner.jpg');
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+      background-size: cover;
+      background-position: 18% 0;
+      height: 100%;
+      width: 100%;
+      z-index: -2;
+    }
+
+  &__nav{
+    @include flex-row-nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+  }
+
+  &__list {
+    list-style: none;
+    transform: translateX(100%);
+    position: fixed;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    top: 0;
+    right:0;
+    height: 60vh;
+    width: 50vw;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $black;
+    transition: .4s;
+    opacity: .8;
+    z-index: 2;
+   //if list is hidden
+    &.active{
+      transform: translateX(0); 
+    }
+  }
+
+  &__item{
+    list-style-type: none;
+  }
+
+  &__link{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__logo{
+    @include flex-center;
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: 900;
+    height: 50%;
+  }
+
+  &__icons{
+    margin-right: 2rem;
+    @include flex-row-nowrap;
+    justify-content: space-around;
+    flex-basis: 25%;
+    height: 50%;
+  }
+
+  &__icon{
+      font-size: 1.3rem;
+      height: 50%;
+  }
+  
+
+  &__model{
+    position: absolute;
+    top: 45%;
+    left: 55%;
+    height: 90vw;
+    width: 90vw;
+    z-index: -1;
+  }
+
+  &__burger{
+    position: fixed;
+    top: 10%;
+    left: 80%;
+    font-size: 4rem;
+    transition: .4s;
+    transform: translateX(-100%);
+    color: $black;
+    &.active{
+      transform: translateX(-50vw);
+    }
+}
+
+
+&__button{
+  @include button;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $black;
+  background-color: $white;
+  &:hover{
+    background-color: $black;
+    color: $white;
+  }
+}
+}
+

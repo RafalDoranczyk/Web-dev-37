@@ -1,0 +1,90 @@
+.clients{
+  height: 70vh;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+
+&__heading{
+  @include heading;
+  font-size: 3rem;
+}
+
+&__box{
+  @include flex-row-wrap;
+  height: 80%;
+
+  &::after{
+    top: -10vw;
+    transform: translateX(-100%) rotate(90deg);
+    left: calc(100% + 15vw);
+    border-top: 20vw solid transparent;
+    border-left: 20vw solid #242424;
+    border-bottom: 20vw solid transparent;
+  }
+}
+
+&__image{
+  @include flex-row-nowrap;
+  flex-basis: 40%;
+  height: 70%;
+  position: relative;
+
+  &::after{
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-top: 20vw solid transparent;
+    border-left: 20vw solid $red;
+    border-bottom: 20vw solid transparent;
+    z-index: -1;
+  }
+  img{
+    width: 100%;
+  }
+}
+&__opinion{
+  flex-basis: 50%;
+  margin: 0 auto;
+  @include flex-row-wrap;
+  align-content: center;
+  height: 70%;
+  font-family: $secondary-font;
+  position: relative;
+
+}
+
+&__description{
+  line-height: 160%;
+  font-style: italic;
+
+}
+
+&__role{
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+
+&__images{
+  flex-basis: 100%;
+  @include flex-row-nowrap;
+  justify-content: space-around;
+ 
+  
+  img{
+    width: 33%;
+  }
+
+}
+
+&__mark{
+  position: absolute;
+  top: 4rem;
+  left: -3.6rem;
+  font-size: 2rem;
+}
+
+}

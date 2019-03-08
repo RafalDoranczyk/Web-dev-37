@@ -1,0 +1,31 @@
+.about{
+  height: 50vh;
+  position: relative;
+  margin-top: 4rem;
+  &__contentBox{
+  height: 100%;
+  @include flex-column-nowrap;
+  justify-content: space-evenly;
+  }
+
+  &__heading{
+    @include heading;
+  }
+
+  &__description{
+    width: 85%;
+    @include description;
+    text-align: justify;
+  }
+
+  &__button{
+    @include button;
+    color: $white;
+  }
+
+  &__imageBox{
+    display: none;
+  }
+}
+
+

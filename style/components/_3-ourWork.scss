@@ -1,0 +1,43 @@
+.ourWork{
+margin-top: 4rem;
+height: 50vh;
+@include flex-column-nowrap;
+justify-content: space-around;
+position: relative;
+
+&::before{
+  top: 75%;
+  left: 0;
+  border-top: 40px solid transparent;
+  border-left: 40px solid #000;
+  border-bottom: 40px solid transparent;
+  z-index: -1;
+}
+&__heading{
+  @include heading;
+}
+
+
+&__contentBox{
+height: 100%;
+@include flex-column-nowrap;
+justify-content: space-around;
+}
+
+&__description{
+  @include description;
+  width: 90%;
+  text-align: justify;
+}
+&__button{
+  @include button;
+  color: $white;
+}
+
+&__gallery{
+  display: none;
+
+}
+
+
+}
