@@ -93,3 +93,19 @@
  }
 
 }
+
+@media #{$vertical}{
+  .footer{
+    height: 150vh;
+  }
+}
+
+@media #{$iPhoneX} {
+ .footer{
+   height: 60vh;
+ 
+    &__copyright{
+      font-size: 1.2rem;
+    }
+   }
+}

@@ -24,11 +24,11 @@
     transform: translate(calc(50vw - 50%),-100%);
     color: $pure-white;
     font-size: 4vh;
-    z-index: 1;
+    z-index: 3; 
     &--fixed{
       top: 5vh;
       transition: .4s;
-      opacity: 1;
+      opacity: .85;
       transform: translate(calc(50vw - 50%),-50%);
       &--active{
         transition: .4s;
@@ -38,7 +38,6 @@
       }
       }
      
-   
   }
   &__nav{
     @include flex-row-nowrap;
@@ -48,6 +47,7 @@
     transition: all .4s;
     font-size: 1.3rem;
     font-family: $primary-font;
+    z-index: 3; 
     &--fixed{
       position: fixed;
       top:0;
@@ -57,11 +57,10 @@
       transition: all .4s;
       background-color: $black;
       font-size: 1.5rem;
-      opacity: .85;
-      z-index: 1;
+      opacity: .80;
 
     }
-  
+
   }
 
 &__list{
@@ -83,15 +82,14 @@
       transform: translateY(0);
       transition: .4s;
       width: 100%;
-      z-index: 1; 
-      opacity: .95;
+      z-index: 3; 
+      opacity: 1;
     }
     &__item{
       flex-basis: 50%;
       flex-grow: 1;
       @include flex-center;
       list-style-type:none;
-   
       a{
         position: relative;
         text-transform: uppercase;
@@ -99,13 +97,16 @@
         color: $white;
         font-weight: 800;
         font-size: 1.5rem;
+        cursor: pointer;
+        &:hover{
+          color: $red;
+        }
       &::after{
         top: 110%;
         left: 15%;
         right: 15%;
         height: 2px;
         border-radius: 50%;
-   
         background-color: $pure-white;
       }
       }
@@ -167,3 +168,57 @@
 }
 }
 
+//VERTICAL
+@media #{$vertical}{
+  .header{
+    height: 100vh;
+  
+  &__model{
+    top: 25%;
+    left: 40%;
+    height: 70vw;
+    width: 70vw;
+  }
+  &__button{
+    bottom: 10%;
+    left: 27%;
+  }
+  &__nav{
+
+    height: 15vh;
+    font-size: 1.6rem;
+  } 
+  &__navTrigger{
+    height: 8vh;
+    width: 8vh;
+    font-size: 8vh;
+    &--fixed{
+      top: 8vh;
+      &--active{
+        transform: translate(calc(60vw - 160%), calc(75vh)) rotate(180deg); 
+        font-size: 3rem;
+      }
+    }
+  }
+  &__list{
+    //FOR MOBILE
+
+    &--mobile{ 
+      width: 60vw;
+      height: 85vh;
+      &--active{
+        top: 15vh;
+      }
+  }
+  }
+  }
+}
+@media #{$iPhoneX} {
+.header{
+  height: 50vh;
+
+  &__model{
+    top: 56%;
+  }
+  }
+  }

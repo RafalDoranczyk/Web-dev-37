@@ -49,7 +49,6 @@
   align-content: center;
   font-family: $primary-font;
   position: relative;
-
 }
 
 &__description{
@@ -80,8 +79,44 @@
 &__mark{
   position: absolute;
   top: -20px;
-  left: -20px;
+  left: -30px;
   font-size: 2rem;
 }
-
 }
+
+@media #{$vertical}{
+  .clients{
+      height: 100vh;
+    &__heading{
+      margin-bottom: 40px;
+    }
+    &__image{
+    flex-basis: 40%;
+    height: 10%;
+    }
+    &__images{
+      flex-basis: 50%;
+      margin: 20px 0 0 50%;
+}
+    &__description{
+      font-size: 1.3rem;
+}
+    &__role{
+      font-size: 1.5rem;
+}
+
+}}
+
+
+@media #{$iPhoneX} {
+
+  .clients{
+    height: 50vh; 
+
+  &__description{
+    font-size: 1.3rem;
+  }
+  &__role{  
+    font-size: 1.3rem;
+  }
+}}

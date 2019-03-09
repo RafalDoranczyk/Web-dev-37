@@ -25,6 +25,9 @@ owl.owlCarousel({
     0: {
       items: 1
     },
+    200: {
+      items: 3
+    },
     600: {
       items: 3
     },
@@ -115,6 +118,7 @@ const navList = document.querySelector('.header__list--mobile ')
 document.addEventListener('scroll', () => {
   const actuallScroll = document.documentElement.scrollTop;
   if (actuallScroll === 0) {
+    document.body.classList.remove('fixedPosition')
     navList.classList.remove('header__list--mobile--active')
     trigger.classList.remove('header__navTrigger--fixed--active')
   }

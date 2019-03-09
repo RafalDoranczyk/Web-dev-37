@@ -98,3 +98,42 @@ position: relative;
 }
 
 }
+
+@media #{$vertical}{
+  .ourWork{
+    margin-top: 80px;
+    @include flex-row-nowrap;
+    justify-content: space-around;
+    height: 100vh;
+    &::before{
+      top: -10%;
+      border-top: 20vh solid transparent;
+      border-left: 20vh solid $red;
+      border-bottom: 20vh solid transparent;
+      opacity: .6;
+    }
+    &__contentBox{
+      flex-basis: 40%;
+    }
+    &__galleryBox{
+      flex-basis: 50%;
+      @include flex-row-nowrap;
+    }
+  }
+}
+
+
+
+@media #{$iPhoneX} {
+  .ourWork{
+    &::before{
+      border-top: 5vh solid transparent;
+      border-left: 5vh solid #000;
+      border-bottom: 5vh solid transparent;
+    }
+    &__description{
+      margin: 15px 0;
+      font-size: 1.6rem;
+    }
+  }
+  }

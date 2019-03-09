@@ -29,4 +29,35 @@
   }
 }
 
+//VERTICAL
 
+@media #{$vertical}{
+  .about{
+    height: 100vh;
+    margin-top: 80px;
+    @include flex-row-nowrap;
+    &__contentBox{
+      flex-basis: 50%;
+    }
+    &__imageBox{
+      display: block;
+      flex-basis: 50%;
+      width: 100%;
+      margin-top: 50px;
+      img{
+      width: 100%;
+      }
+    }
+  }
+}
+
+
+
+@media #{$iPhoneX} {
+  .about{
+    height: 40vh;
+    &__description{
+      font-size: 1.6rem;
+    }
+  }
+  }

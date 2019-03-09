@@ -15,6 +15,7 @@ margin-top: 40px;
 }
 
 &__box{
+  min-height: 300px;
   margin: 15px auto;
   width: 95%;
   @include flex-column-nowrap;
@@ -58,3 +59,33 @@ margin-top: 40px;
   @include description;
 }
 }
+
+
+@media #{$vertical}{
+  .services{
+    &__box{
+      @include flex-row-wrap;
+    }
+    &__item{
+      flex-basis: 50%;
+    }
+    &__iconBox{
+      height: 16vh;
+      width: 16vh;
+      
+    }
+  }
+}
+
+@media #{$iPhoneX} {
+  .services{
+    margin-top: 20px;
+      &__iconBox{
+        height: 8vh;
+        width: 8vh;
+      }
+      &__item{
+      flex-basis: 40%;
+      }
+  }
+  }

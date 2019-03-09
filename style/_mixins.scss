@@ -43,6 +43,9 @@
   font-family: $heading-font;
   color: $heading;
   font-weight: 900;
+  @media #{$vertical}{
+    font-size: 4rem;
+  }
 }
 
 @mixin description{
@@ -51,6 +54,9 @@
   text-align: center;
   font-family: $primary-font;
   color: $gray;
+  @media #{$vertical}{
+    font-size: 1.5rem;
+  }
 }
 
 @mixin subtitle{
