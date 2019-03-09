@@ -129,6 +129,7 @@ document.addEventListener('scroll', () => {
 
 
 trigger.addEventListener('click', () => {
+  document.body.classList.toggle('fixedPosition')
   navList.classList.toggle('header__list--mobile--active')
   trigger.classList.toggle('header__navTrigger--fixed--active')
 })
