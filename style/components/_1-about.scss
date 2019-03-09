@@ -4,8 +4,8 @@
   margin-top: 4rem;
   &__contentBox{
   height: 100%;
-  @include flex-column-nowrap;
-  justify-content: space-evenly;
+  @include flex-row-wrap;
+  justify-content: center;
   }
 
   &__heading{
@@ -13,12 +13,13 @@
   }
 
   &__description{
-    width: 85%;
+    flex-basis: 85%;
     @include description;
     text-align: justify;
   }
 
   &__button{
+    align-self: flex-start;
     @include button;
     color: $white;
   }

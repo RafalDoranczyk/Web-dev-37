@@ -70,4 +70,52 @@ images.forEach((image, index) => {
     role.innerHTML = opinions[index].role;
     img.src = `assets/client-${index + 1}.png`;
   })
-})
+});
+const idea = document.querySelector('.ourWork__imageBox')
+const elementHeight = document.querySelector('.ourWork__imageBox').offsetHeight * 2;
+
+function isScrolledIntoView() {
+
+  var docViewTop = $(window).scrollTop() - $(idea).height() / 2;
+  var docViewBottom = docViewTop + $(idea).height() * 3;
+  var elemTop = $(idea).offset().top;
+  return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+}
+
+document.addEventListener('scroll', () => {
+  if (isScrolledIntoView()) {
+    idea.classList.add('ourWork__imageBox--active')
+  } else {
+    idea.classList.remove('ourWork__imageBox--active')
+
+  }
+});
+
+
+
+// document.addEventListener('scroll', () => {
+//   const ideaHeight = document.querySelector('.ourWork__imageBox').offsetHeight;
+//   const actuallScroll = window.pageYOffset.toFixed(0);
+//   positionsTop = [];
+//   positionsBottom = [];
+//   ideasOffset.forEach(idea => {
+//     positionsTop.push(idea)
+//     positionsBottom.push(idea)
+//   });
+
+//   console.log(ideaHeight);
+//   idea.forEach((id, index) => {
+//     console.log(`pozycja skrola ${index}: top ${positionsTop[index]} bottom ${positionsBottom[index]}`);
+//     console.log(`aktualna pozycja skrola to ${actuallScroll}`);
+//     if (actuallScroll > positionsTop[index] - ideaHeight && actuallScroll < positionsBottom[index] + ideaHeight / 3) {
+//       id.classList.add('ourWork__imageBox--active')
+//       // console.log(`powinien pokazać się ${index}`);
+//     } else {
+//       id.classList.remove('ourWork__imageBox--active')
+//     }
+
+//   }
+//   )
+// });
+
+// // 

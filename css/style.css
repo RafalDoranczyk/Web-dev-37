@@ -216,16 +216,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about__heading {
@@ -237,7 +237,8 @@ body {
 }
 
 .about__description {
-  width: 85%;
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
   font-size: 1.4rem;
   line-height: 160%;
   text-align: center;
@@ -247,6 +248,8 @@ body {
 }
 
 .about__button {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   padding: 1.2rem 1.6rem;
   border-radius: 100px;
   font-weight: 700;
@@ -269,7 +272,7 @@ body {
 .services {
   font-family: "Lato", sans-serif;
   position: relative;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .services::after {
@@ -366,28 +369,15 @@ body {
 
 .ourWork {
   margin-top: 4rem;
-  height: 50vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: relative;
 }
 
 .ourWork::before {
-  top: 75%;
+  top: 20%;
   left: 0;
-  border-top: 40px solid transparent;
-  border-left: 40px solid #000;
-  border-bottom: 40px solid transparent;
+  border-top: 8vh solid transparent;
+  border-left: 8vh solid #000;
+  border-bottom: 8vh solid transparent;
   z-index: -1;
 }
 
@@ -400,14 +390,14 @@ body {
 }
 
 .ourWork__contentBox {
-  height: 100%;
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -421,11 +411,12 @@ body {
   text-align: center;
   font-family: "Open Sans", "sans-serif";
   color: #6a6a6a;
-  width: 90%;
+  width: 85%;
   text-align: justify;
 }
 
 .ourWork__button {
+  margin: 2rem 0;
   padding: 1.2rem 1.6rem;
   border-radius: 100px;
   font-weight: 700;
@@ -441,8 +432,89 @@ body {
   color: #f5f5f5;
 }
 
-.ourWork__gallery {
-  display: none;
+.ourWork__galleryBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ourWork__imageBox {
+  margin: 5rem 0 5rem 0;
+  width: 80%;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ourWork__imageBox:hover {
+  color: #f5f5f5;
+}
+
+.ourWork__imageBox:hover::after {
+  opacity: .75;
+}
+
+.ourWork__imageBox::after {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: .9;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.ourWork__imageBox img {
+  width: 100%;
+}
+
+.ourWork__imageBox--active {
+  color: #f5f5f5;
+}
+
+.ourWork__imageBox--active::after {
+  opacity: .65;
+}
+
+.ourWork__motto, .ourWork__paragraph, .ourWork__number {
+  position: absolute;
+  z-index: 1;
+}
+
+.ourWork__motto {
+  top: 50%;
+  left: 13%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+}
+
+.ourWork__paragraph {
+  font-family: "Open Sans", "sans-serif";
+  left: 13%;
+  top: 70%;
+  width: 50%;
+}
+
+.ourWork__number {
+  top: 5%;
+  left: 77%;
+  font-size: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
 }
 
 .ourTeam {

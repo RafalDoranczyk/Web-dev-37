@@ -1,16 +1,13 @@
 .ourWork{
 margin-top: 4rem;
-height: 50vh;
-@include flex-column-nowrap;
-justify-content: space-around;
 position: relative;
 
 &::before{
-  top: 75%;
+  top: 20%;
   left: 0;
-  border-top: 40px solid transparent;
-  border-left: 40px solid #000;
-  border-bottom: 40px solid transparent;
+  border-top: 8vh solid transparent;
+  border-left: 8vh solid #000;
+  border-bottom: 8vh solid transparent;
   z-index: -1;
 }
 &__heading{
@@ -19,25 +16,86 @@ position: relative;
 
 
 &__contentBox{
-height: 100%;
-@include flex-column-nowrap;
-justify-content: space-around;
+  margin-top: 2rem;
+  @include flex-row-wrap;
+  justify-content: space-around;
 }
 
 &__description{
   @include description;
-  width: 90%;
+  width: 85%;
   text-align: justify;
 }
 &__button{
+  margin: 2rem 0;
   @include button;
   color: $white;
 }
 
-&__gallery{
-  display: none;
-
+&__galleryBox{
+  @include flex-column-nowrap;
 }
 
+&__imageBox{
+  margin: 5rem 0 5rem 0;
+  width: 80%;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  position: relative;
+  top: 0;
+  left: 0;
+  // color: $gray;
+  transition: .4s;
+  &:hover{
+    color: $white;
+    &::after{
+      opacity: .75;
+    }
+  }
+  &::after{
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: .9;
+    transition: .4s;
+  }
+    & img{
+      width: 100%;
+    }
+    &--active{
+      color: $white;
+      &::after{
+        opacity: .65;
+      }
+    }
+}
+
+&__motto,&__paragraph,&__number{
+  position: absolute;
+  z-index: 1;
+}
+
+&__motto{
+  top: 50%;
+  left: 13%;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-family: $secondary-font;
+  font-weight: 800;
+}
+&__paragraph{
+  font-family: $primary-font;
+  left: 13%;
+  top: 70%;
+  width: 50%;
+}
+&__number{
+  top: 5%;
+  left: 77%;
+  font-size: 3rem;
+  font-family: $secondary-font;
+  font-weight: 800;
+}
 
 }
