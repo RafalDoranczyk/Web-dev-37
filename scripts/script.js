@@ -1,12 +1,4 @@
-const burgerIcon = document.querySelector('.header__burger');
-const headerList = document.querySelector('.header__list');
 
-
-const showNavigation = () => {
-  headerList.classList.toggle('active');
-  burgerIcon.classList.toggle('active')
-  console.log('hrr');
-}
 
 const owlButtonLeft = document.querySelector('.ourTeam__owlButton--left')
 const owlButtonRight = document.querySelector('.ourTeam__owlButton--right')
@@ -96,7 +88,6 @@ function isScrolledIntoView() {
   var docViewTop = $(window).scrollTop() - $(idea).height() / 2; //
   var docViewBottom = docViewTop + $(idea).height() * 3; //
   var elemTop = $(idea).offset().top;
-  // return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
   return result;
 }
 
@@ -114,3 +105,30 @@ document.addEventListener('scroll', () => {
 
 });
 
+
+
+const trigger = document.querySelector('.header__navTrigger');
+const navHeight = document.querySelector('.header__nav').offsetHeight
+const nav = document.querySelector('.header__nav')
+const navList = document.querySelector('.header__list--mobile ')
+
+document.addEventListener('scroll', () => {
+  const actuallScroll = document.documentElement.scrollTop;
+  if (actuallScroll === 0) {
+    navList.classList.remove('header__list--mobile--active')
+    trigger.classList.remove('header__navTrigger--fixed--active')
+  }
+  if (actuallScroll > navHeight * 0.6) {
+    trigger.classList.add('header__navTrigger--fixed');
+    nav.classList.add('header__nav--fixed')
+  } else if (actuallScroll < navHeight / 2) {
+    nav.classList.remove('header__nav--fixed')
+    trigger.classList.remove('header__navTrigger--fixed');
+  }
+})
+
+
+trigger.addEventListener('click', () => {
+  navList.classList.toggle('header__list--mobile--active')
+  trigger.classList.toggle('header__navTrigger--fixed--active')
+})

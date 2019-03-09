@@ -1,12 +1,12 @@
 .services{
 font-family: $secondary-font;
 position: relative;
-margin-top: 4rem;
+margin-top: 40px;
   &::after{
     top: 100%;
-    left: 15%;
-    right: 15%;  
-    height: .1rem;
+    left: 25%;
+    right: 25%;  
+    height: 2px;
     background-color:  $red;
   }
 
@@ -15,11 +15,9 @@ margin-top: 4rem;
 }
 
 &__box{
-  margin: 0 auto;
-  height: 300vh;
+  margin: 15px auto;
   width: 95%;
   @include flex-column-nowrap;
-  justify-content: space-around;
   &::after{
     top: 50%;
     left: 0%;
@@ -31,9 +29,11 @@ margin-top: 4rem;
 
 
 &__item{
-  flex-basis: 15%;
+  & > *{
+    margin: 5px 0;
+  }
+  margin: 15px 0;
   @include flex-column-nowrap;
-  justify-content: space-evenly;
 }
 &__iconBox{
   height: 12vh;

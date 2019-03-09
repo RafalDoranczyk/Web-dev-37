@@ -1,7 +1,6 @@
 .header{
   height: 60vh;
   color: $white;
-
   position: relative;
     &::after{
       background: url('../assets/banner.jpg');
@@ -14,61 +13,120 @@
       width: 100%;
       z-index: -2;
     }
-
+  &__navTrigger{
+    opacity: 0;
+    transition: .4s all;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    height:4vh;
+    width: 4vh;
+    transform: translate(-50%,0);
+    color: $pure-white;
+    font-size: 4vh;
+    &--fixed{
+      top: 5vh;
+      transform: translate(-50%,-50%);
+      transition: .8s;
+      opacity: 1;
+      z-index: 1;
+      &--active{
+        transition: .8s;
+        transform: translate(-25%,48vh) rotate(180deg);
+        font-size: 6vh;
+        color: $black;
+      }
+      }
+     
+   
+  }
   &__nav{
     @include flex-row-nowrap;
     justify-content: space-between;
     width: 100%;
     height: 10vh;
-  }
+    transition: all .4s;
+    font-size: 1.3rem;
+    font-family: $primary-font;
+    &--fixed{
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      padding: 10px;
+      transition: all .4s;
+      background-color: $black;
+      font-size: 1.5rem;
+      opacity: .85;
+      z-index: 1;
 
-  &__list {
-    list-style: none;
-    transform: translateX(100%);
-    position: fixed;
-    border-top-left-radius: 20%;
-    border-bottom-left-radius: 20%;
-    top: 0;
-    right:0;
-    height: 60vh;
-    width: 50vw;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $black;
-    transition: .4s;
-    opacity: .8;
-    z-index: 2;
-   //if list is hidden
-    &.active{
-      transform: translateX(0); 
     }
+  
   }
 
-  &__item{
-    list-style-type: none;
-  }
+&__list{
+  //FOR MOBILE
 
-  &__link{
-    display: block;
-    font-size: 1.2rem;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+  &--mobile{ 
+    transform: translateY(-100%);
+    transition: .4s all;
+    @include flex-row-wrap;
+    // justify-content: space-around;
+    background-color: $black;
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &--active{
+      transform: translateY(0);
+      transition: .4s;
+
+      width: 100%;
+      z-index: 1; 
+      opacity: .9;
+    }
+    &__item{
+      flex-basis: 50%;
+      flex-grow: 1;
+      @include flex-center;
+      list-style-type:none;
+   
+      a{
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $white;
+        font-weight: 800;
+        font-size: 1.5rem;
+      &::after{
+        top: 110%;
+        left: 15%;
+        right: 15%;
+        height: 2px;
+        border-radius: 50%;
+   
+        background-color: $pure-white;
+      }
+      }
+    }
+    }
+  
+}
+
+
 
   &__logo{
     font-family: $primary-font;
     @include flex-center;
-    margin-left: 2rem;
+    margin-left: 20px;
     font-size: 2rem;
     font-weight: 900;
     height: 50%;
   }
 
   &__icons{
-    margin-right: 2rem;
+    margin-right: 10px;
     @include flex-row-nowrap;
     justify-content: space-around;
     flex-basis: 25%;
@@ -76,7 +134,6 @@
   }
 
   &__icon{
-      font-size: 1.3rem;
       height: 50%;
   }
   
@@ -90,20 +147,6 @@
     z-index: -1;
   }
 
-  &__burger{
-    position: fixed;
-    top: 10%;
-    left: 80%;
-    font-size: 4rem;
-    transition: .4s;
-    transform: translateX(-100%);
-    color: $black;
-    &.active{
-      transform: translateX(-50vw);
-    }
-}
-
-
 &__button{
   @include button;
   position: absolute;
@@ -112,7 +155,6 @@
   transform: translateX(-50%);
   color: #242424;
   background-color: $pure-white;
-
   &:hover{
     background-color: $black;
     color: $white;

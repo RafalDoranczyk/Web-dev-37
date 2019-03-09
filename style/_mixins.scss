@@ -1,9 +1,5 @@
-@mixin flex($flex-flow: '',$justify-content: '',$align-items: '') {
-  display: flex;
-    flex-flow: $flex-flow;
-    justify-content: $justify-content;
-    align-items: $align-items;
-}
+//STYLES MIXINS
+
 @mixin flex-center{
   display: flex;
   justify-content: center;
@@ -25,16 +21,11 @@
   align-items: center;
 }
 
-
-
-
-
-
-
+//COMPONENTS MIXINS 
 
 @mixin button{
-  padding: 1.2rem 1.6rem;
-  border-radius: 100px;
+  padding: 10px 15px;
+  border-radius: 50px;
   font-weight: 700;
   background-color: #bc2e3a;
   font-family: $secondary-font;

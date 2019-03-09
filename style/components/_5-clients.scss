@@ -6,13 +6,13 @@
 
 &__heading{
   @include heading;
-  margin-top: 1rem;
+  margin-top: 10px;
 }
 
 &__box{
   @include flex-row-wrap;
   flex-grow: 1;
-  padding: 1rem;
+  padding: 10px;
   &::after{
     top: -10vw;
     transform: translateX(-100%) rotate(90deg);
@@ -60,7 +60,7 @@
 }
 
 &__role{
-  margin-top: 1rem;
+  margin-top: 10px;
   font-weight: 900;
 }
 
@@ -79,8 +79,8 @@
 
 &__mark{
   position: absolute;
-  top: -2rem;
-  left: -2rem;
+  top: -20px;
+  left: -20px;
   font-size: 2rem;
 }
 

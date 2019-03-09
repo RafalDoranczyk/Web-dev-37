@@ -1,7 +1,7 @@
 .about{
   height: 50vh;
   position: relative;
-  margin-top: 4rem;
+  margin-top: 40px;
   &__contentBox{
   height: 100%;
   @include flex-row-wrap;

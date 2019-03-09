@@ -1,5 +1,5 @@
 .ourWork{
-margin-top: 4rem;
+margin-top: 40px;
 position: relative;
 
 &::before{
@@ -16,7 +16,7 @@ position: relative;
 
 
 &__contentBox{
-  margin-top: 2rem;
+  margin-top: 20px;
   @include flex-row-wrap;
   justify-content: space-around;
 }
@@ -27,7 +27,7 @@ position: relative;
   text-align: justify;
 }
 &__button{
-  margin: 2rem 0;
+  margin: 20px 0;
   @include button;
   color: $white;
 }
@@ -37,18 +37,17 @@ position: relative;
 }
 
 &__imageBox{
-  margin: 5rem 0 5rem 0;
+  margin: 15px 0;
   width: 80%;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   position: relative;
   top: 0;
   left: 0;
-  // color: $gray;
   transition: .4s;
   &:hover{
     color: $white;
     &::after{
-      opacity: .75;
+      opacity: .95;
     }
   }
   &::after{
@@ -56,7 +55,7 @@ position: relative;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #000;
+    background-color: $black;
     opacity: .9;
     transition: .4s;
   }
