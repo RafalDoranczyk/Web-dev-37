@@ -74,48 +74,43 @@ images.forEach((image, index) => {
 const idea = document.querySelector('.ourWork__imageBox')
 const elementHeight = document.querySelector('.ourWork__imageBox').offsetHeight * 2;
 
-function isScrolledIntoView() {
 
-  var docViewTop = $(window).scrollTop() - $(idea).height() / 2;
-  var docViewBottom = docViewTop + $(idea).height() * 3;
+function isScrolledIntoView() {
+  const docViewsTop = [];
+  const docViewsBottom = [];
+  const elementsTop = [];
+  $('.ourWork__imageBox').each(function (index) {
+    const view = docViewsTop.push(($(window).scrollTop() - $(this).height() / 2).toFixed(0))
+    elementsTop.push($(this).offset().top.toFixed(0))
+  })
+  docViewsTop.map(view => {
+    docViewsBottom.push(Number(view) + Number(($(idea).height() * 3)))
+    // console.log(docViewsBottom[0])
+  });
+
+  const result = [];
+  for (let i = 0; i < elementsTop.length; i++) {
+    result.push((elementsTop[i] <= docViewsBottom[i]) && (elementsTop[i] >= docViewsTop[i]))
+  }
+
+  var docViewTop = $(window).scrollTop() - $(idea).height() / 2; //
+  var docViewBottom = docViewTop + $(idea).height() * 3; //
   var elemTop = $(idea).offset().top;
-  return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+  // return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+  return result;
 }
 
 document.addEventListener('scroll', () => {
-  if (isScrolledIntoView()) {
-    idea.classList.add('ourWork__imageBox--active')
-  } else {
-    idea.classList.remove('ourWork__imageBox--active')
+  const ideas = [...document.querySelectorAll('.ourWork__imageBox')];
+  const results = isScrolledIntoView()
+  for (let i = 0; i < results.length; i++) {
+    if (results[i]) {
+      ideas[i].classList.add('ourWork__imageBox--active')
+    } else {
+      ideas[i].classList.remove('ourWork__imageBox--active')
 
+    }
   }
+
 });
 
-
-
-// document.addEventListener('scroll', () => {
-//   const ideaHeight = document.querySelector('.ourWork__imageBox').offsetHeight;
-//   const actuallScroll = window.pageYOffset.toFixed(0);
-//   positionsTop = [];
-//   positionsBottom = [];
-//   ideasOffset.forEach(idea => {
-//     positionsTop.push(idea)
-//     positionsBottom.push(idea)
-//   });
-
-//   console.log(ideaHeight);
-//   idea.forEach((id, index) => {
-//     console.log(`pozycja skrola ${index}: top ${positionsTop[index]} bottom ${positionsBottom[index]}`);
-//     console.log(`aktualna pozycja skrola to ${actuallScroll}`);
-//     if (actuallScroll > positionsTop[index] - ideaHeight && actuallScroll < positionsBottom[index] + ideaHeight / 3) {
-//       id.classList.add('ourWork__imageBox--active')
-//       // console.log(`powinien pokazać się ${index}`);
-//     } else {
-//       id.classList.remove('ourWork__imageBox--active')
-//     }
-
-//   }
-//   )
-// });
-
-// // 
