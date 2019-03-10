@@ -26,7 +26,7 @@ owl.owlCarousel({
       items: 1
     },
     200: {
-      items: 3
+      items: 1
     },
     600: {
       items: 3
@@ -137,3 +137,4 @@ trigger.addEventListener('click', () => {
   navList.classList.toggle('header__list--mobile--active')
   trigger.classList.toggle('header__navTrigger--fixed--active')
 })
+

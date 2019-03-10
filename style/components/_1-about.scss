@@ -1,7 +1,8 @@
 .about{
   height: 50vh;
   position: relative;
-  margin-top: 40px;
+  margin-top: 20px;
+
   &__contentBox{
   height: 100%;
   @include flex-row-wrap;
@@ -31,7 +32,7 @@
 
 //VERTICAL
 
-@media #{$vertical}{
+@media #{$horizontal}{
   .about{
     height: 100vh;
     margin-top: 80px;
@@ -51,13 +52,49 @@
   }
 }
 
-
-
 @media #{$iPhoneX} {
   .about{
     height: 40vh;
+  }
+  }
+
+@media #{$Pixel2}{
+  .about{
+    margin-top: 40px;
     &__description{
-      font-size: 1.6rem;
+      flex-basis: 75%;
     }
   }
   }
+
+@media #{$iPad}{
+  .about{
+    margin-top: 40px;
+    height: 50vh;
+    &__contentBox{
+      width: 60%;
+      height: 90%;
+      margin-left: 20px;
+      @include flex-column-nowrap;
+      justify-content: space-evenly
+      }
+    &__description{
+      flex-basis: 65%;
+      margin-top: 40px;
+    }
+    &__button{
+    align-self: center;
+    }
+  }
+}
+
+@media #{$iPadPro}{
+  .about{
+    height: 40vh;
+    &__description{
+      width: 90%;
+      font-size: 2.6rem;
+    }
+   
+  }
+}

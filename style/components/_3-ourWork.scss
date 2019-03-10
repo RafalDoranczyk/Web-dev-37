@@ -16,12 +16,14 @@ position: relative;
 
 
 &__contentBox{
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
+  width: 85%;
   @include flex-row-wrap;
   justify-content: space-around;
 }
 
 &__description{
+  margin-top: 20px;
   @include description;
   width: 85%;
   text-align: justify;
@@ -37,7 +39,7 @@ position: relative;
 }
 
 &__imageBox{
-  margin: 15px 0;
+  margin: 10px 0;
   width: 80%;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   position: relative;
@@ -73,12 +75,13 @@ position: relative;
 &__motto,&__paragraph,&__number{
   position: absolute;
   z-index: 1;
+  font-size: 1rem;
 }
 
 &__motto{
   top: 50%;
   left: 13%;
-  font-size: 2.5rem;
+  font-size: 2em;
   text-transform: uppercase;
   font-family: $secondary-font;
   font-weight: 800;
@@ -87,19 +90,20 @@ position: relative;
   font-family: $primary-font;
   left: 13%;
   top: 70%;
-  width: 50%;
+  width: 60%;
+  font-size: 1.1em;
 }
 &__number{
   top: 5%;
   left: 77%;
-  font-size: 3rem;
+  font-size: 2em;
   font-family: $secondary-font;
   font-weight: 800;
 }
 
 }
 
-@media #{$vertical}{
+@media #{$horizontal}{
   .ourWork{
     margin-top: 80px;
     @include flex-row-nowrap;
@@ -122,8 +126,6 @@ position: relative;
   }
 }
 
-
-
 @media #{$iPhoneX} {
   .ourWork{
     &::before{
@@ -133,7 +135,34 @@ position: relative;
     }
     &__description{
       margin: 15px 0;
-      font-size: 1.6rem;
     }
   }
   }
+
+@media #{$iPad}{
+  .ourWork{
+    &__description{
+      width: 80%;
+    }
+    &__imageBox{
+      margin: 20px 0;
+      width: 60%;
+  }
+  &__motto,&__paragraph,&__number{
+   font-size: 4rem;
+  }
+  &__paragraph{
+    font-size: 2rem;
+  }
+}
+}
+
+@media #{$iPadPro}{
+  .ourWork{
+    &__description{
+      margin-top: 40px;
+      width: 75%;
+      font-size: 2.6rem;
+    }
+  }
+}

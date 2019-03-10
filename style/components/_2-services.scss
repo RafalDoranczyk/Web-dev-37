@@ -1,7 +1,7 @@
 .services{
-font-family: $secondary-font;
-position: relative;
-margin-top: 40px;
+  font-family: $secondary-font;
+  position: relative;
+  margin-top: 20px;
   &::after{
     top: 100%;
     left: 25%;
@@ -25,6 +25,7 @@ margin-top: 40px;
     border-top: 10vw solid transparent;
     border-left: 10vw solid $red;
     border-bottom: 10vw solid transparent;
+    opacity: .7;
   }
 }
 
@@ -43,6 +44,7 @@ margin-top: 40px;
   background-color: $red;
   position: relative;
     img{
+      height: 40%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -61,7 +63,7 @@ margin-top: 40px;
 }
 
 
-@media #{$vertical}{
+@media #{$horizontal}{
   .services{
     &__box{
       @include flex-row-wrap;
@@ -88,4 +90,47 @@ margin-top: 40px;
       flex-basis: 40%;
       }
   }
+}
+
+@media #{$Pixel2}{
+  .services{
+  margin-top: 20px;
+}
+}
+
+@media #{$iPad}{
+  .services{
+    &::after{
+     top: 101%;
+    }
+    &__box{
+      @include flex-row-wrap;
+      
+    }
+    &__item{
+      flex-basis: 50%;
+      margin-top: 40px;
+      }
+    &__description{
+      width: 90%;
+    }
+    &__iconBox{
+      height: 15vh;
+      width: 15vh;
+    }
   }
+}
+
+@media #{$iPadPro}{
+  .services{
+  &__box{
+    &::after{
+      top: 45%;
+      border-top: 30vw solid transparent;
+      border-left: 30vw solid $red;
+      border-bottom: 30vw solid transparent;
+      opacity: .5;
+    }
+  }
+  }
+}

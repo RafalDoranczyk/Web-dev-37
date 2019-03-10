@@ -43,6 +43,7 @@
   position: relative;
   font-family: $primary-font;
   color: $pure-white;
+  font-size: 1rem;
     img{
       position: absolute;
       top: 52.5%;
@@ -67,7 +68,7 @@
     top: 50%;
     left: 0;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.4em;
     text-align: center;
     font-weight: 700;
     transform: translateY(-55%) skew(-45deg);
@@ -90,13 +91,13 @@
     width: 100%;
     text-align: center;
     font-style: italic;
-    font-size: 1.2rem;
+    font-size: 1.2em;
     transform: translateY(-50%) skew(-45deg);
   }
 }
 }
 
-@media #{$vertical}{
+@media #{$horizontal}{
 .ourTeam{
   height: 100vh;
   margin-top: 80px;
@@ -109,3 +110,36 @@
 }
 }
 
+@media #{$Pixel2}{
+  .ourTeam{
+    height: 55vh;
+    &__heading{
+    font-size: 4rem;
+  }
+}
+}
+
+@media #{$iPad}{
+  .ourTeam{
+    height: 70vh;
+    &__heading{
+      font-size: 6rem;
+    }
+    &__box{
+      height: 45vh;
+      width: 45vh;
+      font-size: 1.6rem;
+    }
+
+  }
+}
+
+@media #{$iPadPro}{
+  .ourTeam{
+    height: 60vh;
+    &__box{
+      height: 40v;
+      width: 40vh;
+    }
+  }
+}
