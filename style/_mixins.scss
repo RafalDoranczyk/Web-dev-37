@@ -36,25 +36,6 @@
   cursor: pointer;
   color: $pure-white;
 
-  @media #{$iPhoneX}{
-    padding: 15px 20px;
-  }
-  @media #{$Pixel2}{
-    padding: 15px 20px;
-  }
-
-  @media #{$iPad}{
-    padding: 20px 40px;
-    font-size: 2.8rem;
-  }
-  @media #{$iPadPro}{
-    padding: 35px 70px;
-    font-size: 3.2rem;
-  }
-  @media #{$horizontal-medium}{
-    padding: 30px 40px;
-    font-size: 2.8rem;
-  }
 }
 
 @mixin heading{
@@ -63,15 +44,10 @@
   font-family: $heading-font;
   color: $heading;
   font-weight: 900;
-  @media #{$horizontal}{
+  @media #{$landscape-smartphones}{
     font-size: 4rem;
   }
-  @media #{$Pixel2}{
-    font-size: 4.5rem;
-  }
-  @media #{$iPad}{
-    font-size: 6rem;
-  }
+
 }
 
 @mixin description{
@@ -80,18 +56,10 @@
   text-align: center;
   font-family: $primary-font;
   color: $gray;
-  @media #{$horizontal}{
+  @media #{$landscape-smartphones}{
     font-size: 1.5rem;
   }
-  @media #{$iPhoneX}{
-    font-size: 1.5rem;
-  }
-  @media #{$Pixel2}{
-    font-size: 1.6rem;
-  }
-  @media #{$iPad}{
-    font-size: 2.5rem;
-  }
+
 }
 
 @mixin subtitle{
@@ -99,7 +67,5 @@
   font-family: $primary-font;
   font-weight: 900;
   font-size: 2.2rem;
-  @media #{$iPad}{
-    font-size: 3rem;
-  }
+ 
 }

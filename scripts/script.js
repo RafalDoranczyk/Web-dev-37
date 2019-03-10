@@ -3,7 +3,36 @@
 const owlButtonLeft = document.querySelector('.ourTeam__owlButton--left')
 const owlButtonRight = document.querySelector('.ourTeam__owlButton--right')
 
-var owl = $('.owl-carousel');
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+const owlWork = $('.ourWork__galleryBox');
+jQuery(document).ready(function ($) {
+  var alterClass = function () {
+    var ww = document.body.clientWidth;
+    if (ww > 519) {
+      owlWork.owlCarousel({
+        loop: true,
+        items: 3,
+        dots: false,
+        nav: true,
+      })
+    } else if (ww < 519) {
+
+
+
+    };
+  };
+  $(window).resize(function () {
+    alterClass();
+  });
+  //Fire it when the page first loads:
+  alterClass();
+});
+
+
+
+
+
+var owl = $('.ourTeam__owlCarousel');
 
 
 $('.ourTeam__owlButton--right').click(function () {
@@ -25,14 +54,13 @@ owl.owlCarousel({
     0: {
       items: 1
     },
-    200: {
-      items: 1
-    },
     600: {
-      items: 3
+      items: 2,
+      margin: -15,
     },
     1000: {
-      items: 5
+      items: 3,
+      margin: -30,
     }
   }
 })

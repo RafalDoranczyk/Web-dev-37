@@ -83,7 +83,7 @@
 }
 }
 
-@media #{$horizontal}{
+@media #{$landscape-smartphones}{
   .clients{
       height: 100vh;
     &__heading{
@@ -105,63 +105,4 @@
 }
 
 }
-}
-
-@media #{$iPhoneX} {
-
-  .clients{
-    height: 50vh; 
-  &__role{  
-    font-size: 1.3rem;
-  }
-}
-}
-
-@media #{$Pixel2}{
-  .clients{
-    height: 70vh;
-    &__heading{
-      font-size: 4rem;
-      margin-top: 20px;
-    }
-    &__description{
-      font-size: 1.4rem;
-    }
-    &__role{
-      margin-top: 20px;
-      font-size: 1.4rem;
-      width: 100%;
-    }
-  }
-}
-
-@media #{$iPad}{
-  .clients{
-    &__heading{
-      font-size: 6rem;
-    }
-    &__description{
-      font-size: 2.3rem;
-    }
-    &__role{
-      font-size: 2.7rem;
-    }
-    &__images{
-      flex-basis: 55%;
-      margin: -80px 0px 0 auto;
-    }
-  }
-}
-
-@media #{$iPadPro}{
-  .clients{
-    height: 60vh;
-    &__description{
-      font-size: 2.8rem;
-    }
-    &__role{
-      font-size: 3.2em;
-    }
-   
-  }
 }

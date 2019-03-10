@@ -67,6 +67,9 @@
     background: none;
     color: inherit;
     border: none;
+    height: 10vh;
+    width: 10vh;
+    background-color: red;
     padding: 0 !important;
     font: inherit; }
   .owl-carousel.owl-loaded {

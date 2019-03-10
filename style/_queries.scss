@@ -1,10 +1,1 @@
-
-//VERTICAL QUERIES
-$horizontal: "(orientation:landscape) ";
-$horizontal-medium: "(orientation: landscape) and (min-width: 1024px)";
-
-//PORTRAIT QUERIES
-$iPhoneX : "(min-width: 375px) and (min-height: 812px)";
-$Pixel2 :"(min-width: 410px) and (min-height: 730px)";
-$iPad: "(min-width: 768px) and (min-height: 1024px)";
-$iPadPro: "(min-width: 1024px) and (min-height: 1366px)";
+$landscape-smartphones: "only screen and (min-width : 321px)";

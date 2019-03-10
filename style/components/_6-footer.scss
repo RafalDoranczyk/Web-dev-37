@@ -94,55 +94,12 @@
 
 }
 
-@media #{$horizontal}{
+@media #{$landscape-smartphones}{
   .footer{
-    height: 150vh;
-  }
-}
-
-@media #{$iPhoneX} {
- .footer{
-   height: 60vh;
- 
+    height: 120vh;
     &__copyright{
-      font-size: 1.2rem;
-    }
-   }
-}
-
-@media #{$Pixel2}{
-  .footer{
-    &__icon{
-      font-size: 4.5rem;
-  }
-  &__info{
-    font-size: 1.2rem;
-  }
-  &__social{
-    font-size: 2rem
-  }
-  &__copyright{
-    font-size: 1.3rem;
-  }
-}
-}
-
-@media #{$iPad}{
-  .footer{
-    margin-top: 0;
-    height: 80vh;
-    &__info{
-      font-size: 1.8rem;
-    }
-    &__icon{
-      font-size: 7rem;
-    }
-    &__social{
-      font-size: 2.5rem;
-    }
-    &__copyright{
-      font-size: 2rem;
+     @include flex-row-nowrap;
+     justify-content: center;
     }
   }
- 
 }

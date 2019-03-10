@@ -30,12 +30,12 @@
   }
 }
 
-//VERTICAL
+//LANDSCAPE
 
-@media #{$horizontal}{
+@media #{$landscape-smartphones}{
   .about{
-    height: 100vh;
-    margin-top: 80px;
+    height: 80vh;
+    margin-top: 20px;
     @include flex-row-nowrap;
     &__contentBox{
       flex-basis: 50%;
@@ -49,52 +49,10 @@
       width: 100%;
       }
     }
-  }
-}
-
-@media #{$iPhoneX} {
-  .about{
-    height: 40vh;
-  }
-  }
-
-@media #{$Pixel2}{
-  .about{
-    margin-top: 40px;
-    &__description{
-      flex-basis: 75%;
-    }
-  }
-  }
-
-@media #{$iPad}{
-  .about{
-    margin-top: 40px;
-    height: 50vh;
-    &__contentBox{
-      width: 60%;
-      height: 90%;
-      margin-left: 20px;
-      @include flex-column-nowrap;
-      justify-content: space-evenly
-      }
-    &__description{
-      flex-basis: 65%;
-      margin-top: 40px;
-    }
     &__button{
-    align-self: center;
+      margin:  10px 40% 0 2.5%;
     }
   }
 }
 
-@media #{$iPadPro}{
-  .about{
-    height: 40vh;
-    &__description{
-      width: 90%;
-      font-size: 2.6rem;
-    }
-   
-  }
-}
+

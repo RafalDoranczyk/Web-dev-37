@@ -58,7 +58,7 @@
   top: 70%;
   left: 50%;
   transform: translateX(-50%) skew(45deg);
-  width: 40%;
+  width: 50%;
   height: 10%;
   background-color: $black;
   opacity: .8;
@@ -68,7 +68,7 @@
     top: 50%;
     left: 0;
     width: 100%;
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-align: center;
     font-weight: 700;
     transform: translateY(-55%) skew(-45deg);
@@ -80,7 +80,7 @@
   top: 79%;
   left: 55%;
   transform: translateX(-50%) skew(45deg);
-  width: 30%;
+  width: 40%;
   height: 7%;
   background-color: $red;
   opacity: .8;
@@ -97,7 +97,7 @@
 }
 }
 
-@media #{$horizontal}{
+@media #{$landscape-smartphones}{
 .ourTeam{
   height: 100vh;
   margin-top: 80px;
@@ -108,38 +108,4 @@
  
   }
 }
-}
-
-@media #{$Pixel2}{
-  .ourTeam{
-    height: 55vh;
-    &__heading{
-    font-size: 4rem;
-  }
-}
-}
-
-@media #{$iPad}{
-  .ourTeam{
-    height: 70vh;
-    &__heading{
-      font-size: 6rem;
-    }
-    &__box{
-      height: 45vh;
-      width: 45vh;
-      font-size: 1.6rem;
-    }
-
-  }
-}
-
-@media #{$iPadPro}{
-  .ourTeam{
-    height: 60vh;
-    &__box{
-      height: 40v;
-      width: 40vh;
-    }
-  }
 }

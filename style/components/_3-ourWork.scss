@@ -89,7 +89,7 @@ position: relative;
 &__paragraph{
   font-family: $primary-font;
   left: 13%;
-  top: 70%;
+  top: 67%;
   width: 60%;
   font-size: 1.1em;
 }
@@ -103,12 +103,13 @@ position: relative;
 
 }
 
-@media #{$horizontal}{
+@media #{$landscape-smartphones}{
   .ourWork{
-    margin-top: 80px;
+    margin-top: 120px;
     @include flex-row-nowrap;
-    justify-content: space-around;
-    height: 100vh;
+    justify-content: space-between;
+    height: 60vh;
+    width: 200%;
     &::before{
       top: -10%;
       border-top: 20vh solid transparent;
@@ -117,52 +118,22 @@ position: relative;
       opacity: .6;
     }
     &__contentBox{
-      flex-basis: 40%;
+     width: 35%;
+     margin: 0;
+ 
     }
     &__galleryBox{
-      flex-basis: 50%;
       @include flex-row-nowrap;
+      height: 100%;
+      overflow: hidden;
     }
-  }
-}
 
-@media #{$iPhoneX} {
-  .ourWork{
-    &::before{
-      border-top: 5vh solid transparent;
-      border-left: 5vh solid #000;
-      border-bottom: 5vh solid transparent;
-    }
-    &__description{
-      margin: 15px 0;
-    }
-  }
-  }
-
-@media #{$iPad}{
-  .ourWork{
-    &__description{
-      width: 80%;
-    }
     &__imageBox{
-      margin: 20px 0;
-      width: 60%;
-  }
-  &__motto,&__paragraph,&__number{
-   font-size: 4rem;
-  }
-  &__paragraph{
-    font-size: 2rem;
-  }
-}
-}
-
-@media #{$iPadPro}{
-  .ourWork{
-    &__description{
-      margin-top: 40px;
-      width: 75%;
-      font-size: 2.6rem;
+      width: 90vh;
+      height:100%;
+     transform: translateX(-10%);
     }
+   
+  
   }
 }
