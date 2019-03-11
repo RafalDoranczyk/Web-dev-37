@@ -45,6 +45,10 @@
   padding: 15px 25px;
   font-size: 1.5rem;
 }
+@media #{$landscape-large}{
+  font-size: 3rem;
+  padding: 25px 35px;
+}
 }
 
 @mixin heading{
@@ -59,6 +63,9 @@
   }
   @media #{$portrait-Pixel2L}{
     font-size: 3.5rem;
+  }
+  @media #{$landscape-large}{
+    font-size: 5.5rem;
   }
 //SPECIAL DEVICES
 @media #{$portrait-iPhoneX-only}{
@@ -77,6 +84,9 @@
   }
   @media #{$portrait-Pixel2L}{
     font-size: 1.5rem;
+  }
+  @media #{$landscape-large}{
+    font-size: 2rem;
   }
   //SPECIAL DEVICES
 @media #{$portrait-iPhoneX-only}{

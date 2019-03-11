@@ -233,7 +233,6 @@
       }
   }
 }
-
 @media #{$portrait-Pixel2L}{
   .header{
     &::after{
@@ -251,6 +250,31 @@
     }
   }
 }
+@media #{$landscape-large}{
+  .header{
+    &::after{
+      background-position: 40%;
+    }
+    &__model{
+      left: 40%;
+      top: 25%;
+    }
+    &__logo{
+      font-size: 2.2rem;
+    }
+    &__icons{
+      font-size: 1.8rem;
+    }
+    &__list{
+      a{
+        font-size: 1.5rem;
+      }
+    }
+    
+  }
+}
+
+
 
 
 //SPECIAL DEVICES

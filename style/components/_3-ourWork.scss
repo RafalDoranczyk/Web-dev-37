@@ -147,6 +147,13 @@ position: relative;
   }
 }
 }
+@media #{$landscape-large}{
+ .ourWork{
+   &__imageBox{
+     margin-top: 10%;
+    height: 320px;
+ }
+ }}
 
 //SPECIAL DEVICES
 @media #{$landsacpe-iPhoneX-only}{

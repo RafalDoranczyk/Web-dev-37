@@ -33,7 +33,7 @@
 
 @media #{$landscape-smartphones}{
   .about{
-    height: 50vh;
+    height: 80vh;
     margin-top: 50px;
     @include flex-row-nowrap;
     &__contentBox{
@@ -44,7 +44,7 @@
       display: block;
       flex-basis: 50%;
       width: 100%;
-      margin-top: 50%;
+      margin-top: 45%;
       transform: translateY(-50%);
       img{
       width: 100%;
@@ -82,7 +82,7 @@
 
 @media #{$landscape-Pixel2L}{
   .about{
-    margin-top: 120px;
+    margin-top: 80px;
   &__contentBox{
     align-content: space-around;
   }
@@ -93,6 +93,14 @@
 
 }
 
+@media #{$landscape-large}{
+  .about{
+    margin-top: 0;
+    &__imageBox{
+     margin-top: 30%;
+    }
+  }
+}
 
 //SPECIAL DEVICES
 @media #{$landscape-iPhone6-only}{

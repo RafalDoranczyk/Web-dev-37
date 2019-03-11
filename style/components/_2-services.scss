@@ -65,7 +65,7 @@
 
 @media #{$landscape-smartphones}{
   .services{
-    margin-top: 120px;
+    margin-top: 40px;
     &__box{
       @include flex-row-wrap;
     }
@@ -97,7 +97,11 @@
   }
 
 }
-
+@media #{$landscape-large}{
+ .services{
+   margin-top: 40px;
+ }
+}
 
 
 //SPECIAL DEVICES
