@@ -21,6 +21,7 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+
   &--left{
     left: 2%;
     border-bottom: 3vh solid transparent;
@@ -45,6 +46,7 @@
   color: $pure-white;
   font-size: 1rem;
     img{
+      height: 100%;
       position: absolute;
       top: 52.5%;
       left: 48%;
@@ -99,13 +101,38 @@
 
 @media #{$landscape-smartphones}{
 .ourTeam{
-  height: 100vh;
-  margin-top: 80px;
-  &__box{
-    margin-top: 20px;
-    height: 80vh;
-    width: 80vh;
- 
+  height: 85vh;
+  margin: 40px auto 0 auto;
+  &__owlButton{
+    border-width: 6vh;
   }
+
+  &__box{
+    margin-top: 30px;
+    height: 70vh;
+    width: 70vh;
+  }
+
+//FOR ALL OWL ITEMS
+  .owl-item{
+    @include flex-center;
+    &>*{
+      opacity: .5;
+    }
+    img{
+      height: 60%;
+    }
+  }
+   //FOR ACTIVE ITEMS
+  .active.center{
+    &>*{
+      opacity: 1;
+    }
+    img{
+      height: 100%;
+ 
+      }
+    }
+  
 }
 }

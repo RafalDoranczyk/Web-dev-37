@@ -83,9 +83,6 @@
       &> .header__icons{
         transform: translateX(0);
       }
-      &> .header__logo{
-        font-size: 1.4rem;
-      }
     }}
     }
 
@@ -105,33 +102,26 @@
 
     &__icons{
     height: 100%;
-    flex-basis: 20%;
+    flex-basis: 25%;
     @include flex-center;
     justify-content: space-around;
     transform: translateX(100%);
     transition: .4s;
-
-    @media #{$landscape-smartphones} {
-      transform: translateX(0);
-      font-size: 2rem;
-    }
+    font-size: 1rem;
     }
 
     &__icon{
-    font-size: 1.6rem;
+    font-size: 1.2em;
     height: 50%;
     @include flex-center;
-    @media screen and (min-width: 501px){
-      font-size: 1rem;
-    }
     }
 
-
+//WHOLE NAVIGATION WITH QUERIES IS BUILD HERE
   &__list{
-  font-size: 1rem;
-  &__item{
-    @include flex-center;
-    list-style-type:none;
+    font-size: 1rem;
+    &__item{
+      @include flex-center;
+      list-style-type:none;
     a{
       position: relative;
       text-transform: uppercase;
@@ -154,8 +144,9 @@
     }
   }
   @media screen and (min-width: 501px){
+
     &__item{
-      flex-basis: 15%;
+      flex-grow: 1;
     }
     &--desktop{
       @include flex-row-nowrap;
@@ -164,7 +155,11 @@
       font-size: 1em;
       height: 10vh;
       font-size: .6rem;
-    }}
+    }
+      a{
+         font-size: 1.8em
+    ;
+  }}
 
   @media screen and (max-width: 490px), (width: 768px) and (height: 1024px) {
     &__item{
@@ -195,34 +190,38 @@
   }
 
 }
-
-
- 
-
-
-
 }
-
 
 @media #{$landscape-smartphones}{
   .header{
     height: 100vh;
-  &__model{
-    top: 25%;
-    left: 40%;
-    height: 70vw;
-    width: 70vw;
-  }
-  &__button{
-    bottom: 7%;
-    left: 27%;
-  }
-  &__nav{
-    height: 20vh;
-    font-size: 1.6rem;
-  } 
+      &::after{
+        background-position: 100%;
+      }
+      &__logo{
+        font-size: 1.1rem;
+      }
+      &__icons{ 
+        transform: translateX(0);
+        font-size: .8rem;
+        flex-basis: 16%;
+      } 
+      &__model{
+        top: 25%;
+        left: 36%;
+        height: 70vw;
+        width: 70vw;
+      }
+      &__button{
+        bottom: 15%;
+        left: 27%;
+      }
+      &__nav{
+        height: 15vh;
+      } 
+     
  
-  &__navTrigger--fixed{
+      &__navTrigger--fixed{
     transform: translate(-50%, 5vh);
     height: 10vh;
     width: 10vh;
@@ -231,10 +230,44 @@
       transform: translate(20vh,50vh) rotate(180deg); 
       color: $red;
   }
-  }
-
- 
+      }
   }
 }
 
+@media #{$portrait-Pixel2L}{
+  .header{
+    &::after{
+     background-position: 22%;
+    }
+
+  }
+}
+
+@media #{$landscape-Pixel2L}{
+  .header{
+    &__model{
+      left: 38%;
+      top: 20%;
+    }
+  }
+}
+
+
+//SPECIAL DEVICES
+@media #{$portrait-iPhoneX-only}{
+  .header{
+    height: 50vh;
+  &__model{
+    top: 55%;
+    left: 45%;
+  }
+  }
+}
+@media #{$landsacpe-iPhoneX-only}{
+  .header{
+    &__model{
+      top: 10%;
+    }
+  }
+}
 

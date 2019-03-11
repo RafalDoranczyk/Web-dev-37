@@ -70,7 +70,6 @@
     margin: 0 auto;
     @include flex-row-nowrap;
     justify-content: space-around;
-    align-items: center;
     position: relative;
     font-size: 1rem;
     &::after{
@@ -96,10 +95,92 @@
 
 @media #{$landscape-smartphones}{
   .footer{
-    height: 120vh;
+    height: 85vh;
+    &__box{
+      height: 50%;
+      @include flex-row-nowrap;
+    }
+    &__item{
+      height: 80%;
+      @include flex-column-nowrap;  
+    }
+    &__info{
+      font-size: .7rem;
+      flex-basis: 50%;
+      flex-grow: 0;
+      width: 100%;
+    }
+    &__icon{
+      height: 40%;
+    }
+    &__social{
+      font-size: 1.2rem;
+      height: 15%;
+    }
     &__copyright{
-     @include flex-row-nowrap;
-     justify-content: center;
+      @include flex-row-nowrap;
+      justify-content: center;
+   }
+}}
+
+@media #{$portrait-Pixel2}{
+  .footer{
+    &__icon{
+      font-size: 4rem;
+    }
+    &__info{
+      font-size: 1.3rem;
+    }
+    &__social{
+      font-size: 1.5rem;
+    }
+    &__copyright{
+      font-size: 1.2rem;
     }
   }
 }
+
+@media #{$landscape-Pixel2}{
+  .footer{
+    &__info{
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media #{$landscape-Pixel2L}{
+  .footer{
+    height: 100vh;
+  
+  &__social{
+    font-size: 1.6rem;
+  }
+  &__copyright{
+    font-size: 1.3rem;
+  }
+  }
+}
+//SPECIAL DEVICES
+@media #{$portrait-iPhoneX-only}{
+  .footer{
+    height: 70vh;
+    margin-top: 0;
+
+    &__info{
+      font-size: 1.2rem;
+    }
+    &__social{
+      font-size: 1.4rem;
+    }
+    &__copyright{
+      font-size: 1.2rem;
+    }
+  }
+
+ }
+
+ @media #{$landsacpe-iPhoneX-only}{
+  .footer{
+    margin-top: 80px;
+  }
+   }

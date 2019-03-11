@@ -2,11 +2,10 @@
   height: 50vh;
   position: relative;
   margin-top: 20px;
-
   &__contentBox{
-  height: 100%;
-  @include flex-row-wrap;
-  justify-content: center;
+    height: 100%;
+    @include flex-row-wrap;
+    justify-content: center;
   }
 
   &__heading{
@@ -34,25 +33,91 @@
 
 @media #{$landscape-smartphones}{
   .about{
-    height: 80vh;
-    margin-top: 20px;
+    height: 50vh;
+    margin-top: 50px;
     @include flex-row-nowrap;
     &__contentBox{
       flex-basis: 50%;
+      text-align: center;
     }
     &__imageBox{
       display: block;
       flex-basis: 50%;
       width: 100%;
-      margin-top: 50px;
+      margin-top: 50%;
+      transform: translateY(-50%);
       img{
       width: 100%;
       }
     }
     &__button{
-      margin:  10px 40% 0 2.5%;
+      margin: 10px 0 0 0;
+    }
+  
+  }
+}
+
+@media #{$landscape-Pixel2}{
+  .about{
+    height: 80vh;
+    &__imageBox{
+      margin-top: 40%;
+        }
+
+  }
+ 
+}
+
+@media #{$portrait-Pixel2L}{
+  .about{
+    height: 35vh;
+    &__description{
+      flex-basis: 70%;
+    }
+    &__button{
+      margin-top: 30px;
     }
   }
 }
 
+@media #{$landscape-Pixel2L}{
+  .about{
+    margin-top: 120px;
+  &__contentBox{
+    align-content: space-around;
+  }
+  &__description{
+    flex-basis: 70%;
+  }
+  }
 
+}
+
+
+//SPECIAL DEVICES
+@media #{$landscape-iPhone6-only}{
+  .about{
+    height: 80vh;
+    &__imageBox{
+      margin-top: 40%;
+    }
+  }
+}
+
+@media #{$portrait-iPhoneX-only}{
+ .about{
+   margin-top: 40px;
+ }
+}
+
+@media #{$landsacpe-iPhoneX-only}{
+ .about{
+   margin-top: 120px;
+   &__description{
+     flex-basis: 70%;
+   }
+   &__contentBox{
+     align-content: space-around;
+   }
+ }
+}

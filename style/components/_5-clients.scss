@@ -106,3 +106,65 @@
 
 }
 }
+
+@media #{$portrait-Pixel2}{
+  .clients{
+    &__description{
+      font-size: 1.4rem;
+    }
+    &__role{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media #{$landscape-Pixel2}{
+  .clients{
+    height: 75vh;
+    &__description{
+      width: 80%;
+      text-align: justify;
+    }
+    &__images{
+      img{
+        width: 25%;
+      }
+    }
+  }
+}
+
+@media #{$landscape-Pixel2L}{
+  .clients{
+    height: 85vh;
+    &__description{
+      font-size: 1.5rem;
+      width: 70%;
+    }
+  }
+}
+
+
+//SPECIAL DEVICES
+@media #{$landsacpe-iPhoneX-only}{
+.clients{
+  height: 90vh;
+&__description{
+  font-size: 1.6rem;
+}
+&__role{
+  font-size: 1.8rem;
+}
+}
+ }
+
+@media #{$portrait-iPhoneX-only}{
+  .clients{
+    height: 50vh;
+  &__images{
+    img{
+      width: 25%;
+    }
+  }
+  }
+
+ }

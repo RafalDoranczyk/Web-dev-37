@@ -6,7 +6,8 @@ position: relative;
   top: 20%;
   left: 0;
   border-top: 8vh solid transparent;
-  border-left: 8vh solid #000;
+  border-left: 8vh solid $red;
+  opacity: .65;
   border-bottom: 8vh solid transparent;
   z-index: -1;
 }
@@ -36,38 +37,35 @@ position: relative;
 
 &__galleryBox{
   @include flex-column-nowrap;
+  justify-content: space-around;
 }
 
 &__imageBox{
   margin: 10px 0;
+  height: 170px;
   width: 80%;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   position: relative;
   top: 0;
   left: 0;
   transition: .4s;
-  &:hover{
-    color: $white;
     &::after{
-      opacity: .95;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $black;
+      opacity: .9;
+      transition: .4s;
     }
-  }
-  &::after{
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: $black;
-    opacity: .9;
-    transition: .4s;
-  }
     & img{
       width: 100%;
+      height: 100%;
     }
     &--active{
       color: $white;
       &::after{
-        opacity: .65;
+        opacity: .55;
       }
     }
 }
@@ -80,7 +78,7 @@ position: relative;
 
 &__motto{
   top: 50%;
-  left: 13%;
+  left: 15%;
   font-size: 2em;
   text-transform: uppercase;
   font-family: $secondary-font;
@@ -88,7 +86,7 @@ position: relative;
 }
 &__paragraph{
   font-family: $primary-font;
-  left: 13%;
+  left: 15%;
   top: 67%;
   width: 60%;
   font-size: 1.1em;
@@ -105,17 +103,16 @@ position: relative;
 
 @media #{$landscape-smartphones}{
   .ourWork{
-    margin-top: 120px;
+    margin-top: 80px;
     @include flex-row-nowrap;
     justify-content: space-between;
     height: 60vh;
     width: 200%;
     &::before{
-      top: -10%;
+      top: -40%;
       border-top: 20vh solid transparent;
       border-left: 20vh solid $red;
       border-bottom: 20vh solid transparent;
-      opacity: .6;
     }
     &__contentBox{
      width: 35%;
@@ -123,17 +120,43 @@ position: relative;
  
     }
     &__galleryBox{
-      @include flex-row-nowrap;
       height: 100%;
       overflow: hidden;
+      border-radius: 15%;
     }
 
     &__imageBox{
       width: 90vh;
-      height:100%;
-     transform: translateX(-10%);
+      &::after, &:hover::after{
+       opacity: .5;
+      }
     }
-   
   
   }
 }
+
+@media #{$landscape-Pixel2L}{
+  .ourWork{
+    &__description{
+      width: 70%;
+    }
+    &__imageBox{
+      height: 200px;
+      width: 80%;
+      transform: translateX(-10%);
+  }
+}
+}
+
+//SPECIAL DEVICES
+@media #{$landsacpe-iPhoneX-only}{
+  .ourWork{
+    height: 80vh;
+    &__description{
+      width: 70%;
+    }
+    &__galleryBox{
+      margin-top: 5%;
+    }
+  }
+ }

@@ -65,7 +65,7 @@
 
 @media #{$landscape-smartphones}{
   .services{
-    margin-top: 80px;
+    margin-top: 120px;
     &__box{
       @include flex-row-wrap;
     }
@@ -73,10 +73,36 @@
       flex-basis: 50%;
     }
     &__iconBox{
-      height: 16vh;
-      width: 16vh;
-      
+      height: 22vh;
+      width: 22vh;
+    }
+    &__description{
     }
   }
 }
 
+@media #{$landscape-Pixel2}{
+  .services{
+    margin-top: 0;
+  }
+}
+
+@media #{$portrait-Pixel2L}{
+  .services{
+    margin-top: 40px;
+  &__description{
+    width: 55%;
+  }
+  
+  }
+
+}
+
+
+
+//SPECIAL DEVICES
+@media #{$landscape-iPhone6-only}{
+  .services{
+    margin-top: 20px;
+  }
+}

@@ -9,11 +9,13 @@ jQuery(document).ready(function ($) {
   var alterClass = function () {
     var ww = document.body.clientWidth;
     if (ww > 519) {
+
       owlWork.owlCarousel({
         loop: true,
         items: 3,
         dots: false,
         nav: true,
+        margin: -90,
       })
     } else if (ww < 519) {
 
@@ -45,23 +47,15 @@ $('.ourTeam__owlButton--left').click(function () {
 
 owl.owlCarousel({
   loop: true,
-  items: 3,
+  items: 1,
+  stagePadding: 20,
   center: true,
-  lazyLoad: true,
   dots: false,
   nav: false,
   responsive: {
-    0: {
-      items: 1
-    },
-    600: {
-      items: 2,
-      margin: -15,
-    },
-    1000: {
+    500: {
       items: 3,
-      margin: -30,
-    }
+    },
   }
 })
 
