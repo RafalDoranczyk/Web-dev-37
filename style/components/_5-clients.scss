@@ -92,6 +92,9 @@
     &__image{
     flex-basis: 30%;
     height: 10%;
+    &::after{
+      left: -10%;
+    }
     }
     &__images{
       flex-basis: 50%;

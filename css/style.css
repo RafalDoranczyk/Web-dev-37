@@ -1563,6 +1563,9 @@ body {
         flex-basis: 30%;
     height: 10%;
   }
+  .clients__image::after {
+    left: -10%;
+  }
   .clients__images {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
@@ -1847,11 +1850,11 @@ body {
 
 @media only screen and (min-width: 321px) and (orientation: landscape) {
   .footer {
-    height: 75vh;
-    margin-top: 95px;
+    height: 80vh;
+    margin-top: 115px;
   }
   .footer__box {
-    height: 50%;
+    height: 40%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1864,7 +1867,7 @@ body {
             align-items: center;
   }
   .footer__item {
-    height: 80%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1890,9 +1893,10 @@ body {
   }
   .footer__social {
     font-size: 1.3rem;
-    height: 20%;
+    height: 25%;
   }
   .footer__copyright {
+    margin-top: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

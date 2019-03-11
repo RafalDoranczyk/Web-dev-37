@@ -95,14 +95,14 @@
 
 @media #{$landscape-smartphones}{
   .footer{
-    height: 75vh;
-    margin-top: 95px;
+    height: 80vh;
+    margin-top: 115px;
     &__box{
-      height: 50%;
+      height: 40%;
       @include flex-row-nowrap;
     }
     &__item{
-      height: 80%;
+      height: 100%;
       @include flex-column-nowrap;  
     }
     &__info{
@@ -116,9 +116,10 @@
     }
     &__social{
       font-size: 1.3rem;
-      height: 20%;
+      height: 25%;
     }
     &__copyright{
+      margin-top: 10px;
       @include flex-row-nowrap;
       justify-content: center;
    }
