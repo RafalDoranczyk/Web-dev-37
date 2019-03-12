@@ -66,6 +66,9 @@
 @media #{$landscape-smartphones}{
   .services{
     margin-top: 40px;
+    &::after{
+      top: 102%;
+    }
     &__box{
       @include flex-row-wrap;
     }
@@ -76,8 +79,7 @@
       height: 22vh;
       width: 22vh;
     }
-    &__description{
-    }
+   
   }
 }
 
@@ -100,9 +102,58 @@
 @media #{$landscape-large}{
  .services{
    margin-top: 40px;
+   &__description{
+     width: 50%;
+     text-align: start;
+     margin: 0 auto;
+   }
+   &__iconBox{
+     height: 13vh;
+     width: 13vh;
+   }
  }
 }
 
+@media #{$portrait-huge}{
+  .services{
+    margin: 80px;
+  }
+}
+
+@media #{$landscape-huge}{
+.services{
+  background-color: $white;
+  height: 100vh;
+  padding: 40px 0;
+
+  &__box{
+    justify-content: space-around;
+    height: 80%;
+    &::after{
+      top: 40%;
+    }
+  }
+  &__item{
+    height: 50%;
+  flex-basis: 30%;
+  @include flex-row-wrap;
+  align-content: center;
+  }
+  &__iconBox{
+    height: 10vh;
+    width: 10vh;
+  }
+  &__subtitle{
+    flex-grow: 1;
+margin-left: 10px;
+    font-size: 3rem;
+  }
+  &__description{
+    flex-basis: 100%;
+    margin-left: 10vh;
+  }
+}
+}
 
 //SPECIAL DEVICES
 @media #{$landscape-iPhone6-only}{

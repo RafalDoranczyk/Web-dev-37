@@ -20,6 +20,11 @@
   flex-flow: column nowrap;
   align-items: center;
 }
+@mixin flex-column-wrap{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
 
 //COMPONENTS MIXINS 
 
@@ -46,8 +51,11 @@
   font-size: 1.5rem;
 }
 @media #{$landscape-large}{
-  font-size: 3rem;
-  padding: 25px 35px;
+  font-size: 2.6rem;
+}
+@media #{$portrait-large}{
+  font-size: 4rem;
+  padding: 20px 30px;
 }
 }
 
@@ -67,6 +75,10 @@
   @media #{$landscape-large}{
     font-size: 5.5rem;
   }
+  
+@media #{$portrait-large}{
+font-size: 7rem;
+}
 //SPECIAL DEVICES
 @media #{$portrait-iPhoneX-only}{
   font-size: 3.6rem;
@@ -88,6 +100,9 @@
   @media #{$landscape-large}{
     font-size: 2rem;
   }
+  @media #{$portrait-large}{
+    font-size: 3rem;
+    }
   //SPECIAL DEVICES
 @media #{$portrait-iPhoneX-only}{
   font-size: 1.7rem;
@@ -100,5 +115,7 @@
   font-family: $primary-font;
   font-weight: 900;
   font-size: 2.2rem;
- 
+  @media #{$portrait-large}{
+    font-size: 4rem;
+    }
 }

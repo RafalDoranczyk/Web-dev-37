@@ -103,6 +103,7 @@ position: relative;
 
 @media #{$landscape-smartphones}{
   .ourWork{
+    
     margin-top: 80px;
     @include flex-row-nowrap;
     justify-content: space-between;
@@ -113,6 +114,9 @@ position: relative;
       border-top: 20vh solid transparent;
       border-left: 20vh solid $red;
       border-bottom: 20vh solid transparent;
+    }
+    &__button{
+      margin: 20px 50% 0 10px;
     }
     &__contentBox{
      width: 35%;
@@ -151,10 +155,58 @@ position: relative;
  .ourWork{
    &__imageBox{
      margin-top: 10%;
-    height: 320px;
+      height: 320px;
  }
+&__button{
+    margin: 20px 40% 0 40px;
+}
+&__motto{
+  font-size: 4rem;
+}
+&__paragraph{
+  font-size: 2rem;
+}
+&__number{
+  font-size: 4rem;
+}
+
  }}
 
+ @media #{$portrait-large}{
+   .ourWork{
+  &__imageBox{
+    height: 330px;
+    margin: 30px 0;
+  }
+  &__motto{
+    font-size: 4rem;
+  }
+  &__paragraph{
+    font-size: 2.5rem;
+   }
+   &__number{
+     font-size: 5rem;
+   }
+   }
+ }
+
+ @media #{$landscape-huge}{
+   .ourWork{
+     &__description{
+       flex-basis: 50%;
+     }
+  &__button{
+    margin-left: 15%;
+  }
+  &__imageBox{
+    height:400px;
+   
+  }
+  &__galleryBox{
+    border-radius: 0;
+  }
+   }
+ }
 //SPECIAL DEVICES
 @media #{$landsacpe-iPhoneX-only}{
   .ourWork{
@@ -166,4 +218,17 @@ position: relative;
       margin-top: 5%;
     }
   }
+ }
+ @media #{$portrait-huge}{
+   .ourWork{
+     &__description{
+       width: 70%;
+       margin: 60px 0;
+     }
+    
+    &__imageBox{
+      margin-top: 80px;
+      height: 500px;
+    }
+   }
  }

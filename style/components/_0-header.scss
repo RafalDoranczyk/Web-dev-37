@@ -38,9 +38,10 @@
     }
 
     &__navTrigger{
-     @media(min-width: 501px){
+     @media(min-width: 501px) and (orientation:landscape) {
        display: none;
      }
+    
       transition: .4s all;
       position: fixed;
       @include flex-center;
@@ -70,7 +71,7 @@
     font-family: $primary-font;
     z-index: 3; 
     font-size: 1rem;
-    @media screen and (max-width: 800px){
+    @media screen and (max-width: 800px), (min-width: 1024px) and (orientation: portrait){
     &--fixed{
       position: fixed;
       top:0;
@@ -143,25 +144,8 @@
     }
     }
   }
-  @media screen and (min-width: 501px){
 
-    &__item{
-      flex-grow: 1;
-    }
-    &--desktop{
-      @include flex-row-nowrap;
-      flex-basis: 95%;
-      margin-left: 30px;
-      font-size: 1em;
-      height: 10vh;
-      font-size: .6rem;
-    }
-      a{
-         font-size: 1.8em
-    ;
-  }}
-
-  @media screen and (max-width: 490px), (width: 768px) and (height: 1024px) {
+  @media screen and (max-width: 490px), (min-width: 768px) and (min-height: 1000px) {
     &__item{
       flex-basis: 50%;
       flex-grow: 1;
@@ -188,6 +172,23 @@
       
       }
   }
+  @media screen and (min-width: 501px){
+
+    &__item{
+      flex-grow: 1;
+    }
+    &--desktop{
+      @include flex-row-nowrap;
+      flex-basis: 95%;
+      margin-left: 30px;
+      font-size: 1em;
+      height: 10vh;
+      font-size: .6rem;
+    }
+      a{
+         font-size: 1.5em
+    ;
+  }}
 
 }
 }
@@ -207,14 +208,13 @@
         flex-basis: 16%;
       } 
       &__model{
-        top: 25%;
-        left: 36%;
-        height: 70vw;
-        width: 70vw;
+        top: 12%;
+        left: 42%;
+        height: 62vw;
+        width: 62vw;
       }
       &__button{
-        bottom: 15%;
-        left: 27%;
+        left: 35%;
       }
       &__nav{
         height: 15vh;
@@ -256,8 +256,8 @@
       background-position: 40%;
     }
     &__model{
-      left: 40%;
-      top: 25%;
+      left: 45%;
+      top: 32%;
     }
     &__logo{
       font-size: 2.2rem;
@@ -274,8 +274,50 @@
   }
 }
 
+@media #{$portrait-large}{
+  .header{
+height: 85vh;
+  &::after{
+    background-position: 20%;
+  }
+  &__logo{
+    font-size: 3.5rem;
+  }
+&__model{
+  display: none;
+}
+&__icons{
+  font-size: 2rem;
+}
+&__list{
+  width: 100%;
+  margin-left: 0;
+  font-size: 2.1rem;
+}
+}
+}
 
-
+@media #{$landscape-huge}{
+  .header{
+    height: 100vh;
+&__list{
+  flex-basis: 40%;
+  margin-left: 30%;
+}
+&__icons{
+  flex-basis: 10%;
+}
+&__logo{
+  margin-left: 40px;
+  font-size: 3rem;
+}
+&__model{
+  top: 15%;
+  height: 100vh;
+  width: 100vh;
+}
+  }
+}
 
 //SPECIAL DEVICES
 @media #{$portrait-iPhoneX-only}{

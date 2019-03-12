@@ -131,6 +131,9 @@
 /*
  * 	Owl Carousel - Lazy Load Plugin
  */
+ .owl-item.active.center{
+   z-index: 9999;
+ }
 .owl-carousel .owl-item {
   /**
 			This is introduced due to a bug in IE11 where lazy loading combined with autoheight plugin causes a wrong

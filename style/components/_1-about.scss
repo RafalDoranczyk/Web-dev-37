@@ -34,7 +34,7 @@
 @media #{$landscape-smartphones}{
   .about{
     height: 80vh;
-    margin-top: 50px;
+    margin-top: 20px;
     @include flex-row-nowrap;
     &__contentBox{
       flex-basis: 50%;
@@ -42,7 +42,7 @@
     }
     &__imageBox{
       display: block;
-      flex-basis: 50%;
+      flex-basis: 60%;
       width: 100%;
       margin-top: 45%;
       transform: translateY(-50%);
@@ -96,11 +96,71 @@
 @media #{$landscape-large}{
   .about{
     margin-top: 0;
+    height: 80vh;
+    &__contentBox{
+      height: 80%;
+    }
     &__imageBox{
      margin-top: 30%;
     }
   }
 }
+
+@media #{$portrait-large}{
+  .about{
+    height: 80vh;
+  }
+}
+
+@media #{$portrait-huge}{
+  .about{
+height: 50vh;
+
+&__contentBox{
+  @include flex-column-nowrap;
+justify-content: space-around;
+}
+&__description{
+  flex-basis: 0;
+  width: 60%;
+}
+&__button{
+  align-self: center;
+}
+  }
+}
+
+@media #{$landscape-huge}{
+  .about{
+    &::after{
+      top: 0;
+      left: 80vh;
+      width: 50%;
+      // opacity: .6;
+      z-index: -2;
+      border-top: 100vh solid $black;
+    border-left: 70vh solid transparent;
+    border-right: 70vh solid transparent;
+    }
+    &__contentBox{
+      flex-basis: 50%;
+     @include flex-column-nowrap;
+    justify-content: space-around;
+    }
+    &__description{
+   flex-basis: 0;
+   width: 50%;
+    }
+    &__imageBox{
+      width: 50%;
+      flex-basis: 40%;
+    }
+    &__button{
+      margin: 0;
+      align-self: center;
+    }
+}}
+
 
 //SPECIAL DEVICES
 @media #{$landscape-iPhone6-only}{

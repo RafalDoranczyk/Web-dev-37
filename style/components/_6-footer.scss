@@ -17,6 +17,7 @@
     border-bottom: 15vw solid $red;
     border-left: 15vw solid transparent;
     border-right: 15vw solid transparent;
+    opacity: .6;
 }
 
   &__heading{
@@ -62,6 +63,7 @@
       }
       & span{
         font-size: 1.2em;
+
       }
     }
   &__social{
@@ -89,6 +91,9 @@
    @include flex-column-nowrap;
    justify-content: space-around;
    margin: 0 auto;
+   & span{
+    margin-left: 10px;
+   }
  }
 
 }
@@ -96,9 +101,8 @@
 @media #{$landscape-smartphones}{
   .footer{
     height: 80vh;
-    margin-top: 115px;
     &__box{
-      height: 40%;
+      height: 50%;
       @include flex-row-nowrap;
     }
     &__item{
@@ -112,11 +116,11 @@
       width: 100%;
     }
     &__icon{
-      height: 40%;
+      height: 50%;
     }
     &__social{
       font-size: 1.3rem;
-      height: 25%;
+      height: 15%;
     }
     &__copyright{
       margin-top: 10px;
@@ -165,7 +169,7 @@
 
 @media #{$landscape-large}{
  .footer{
-   height: 80vh;
+  margin-top: 80px;
    &__info{
      font-size: 1.8rem;
    }
@@ -179,6 +183,71 @@
    font-size: 1.5rem;
  }
   }
+}
+
+@media #{$portrait-large}{
+.footer{
+  &__icon{
+    font-size: 6rem;
+  }
+  &__info{
+    font-size: 2rem;
+  }
+  &__social{
+    font-size: 2.3rem;
+  }
+  &__copyright{
+    font-size: 2rem;
+  }
+}
+
+}
+
+@media #{$portrait-huge}{
+.footer{
+  &__social{
+    font-size: 3.4rem;
+  }
+  &__copyright{
+    @include flex-row-nowrap;
+    justify-content: center;
+    font-size: 2.3rem;
+    width: 80%;
+  }
+}
+ }
+
+
+
+ @media #{$landscape-huge}{
+   .footer{
+     height: 70vh;
+     &__item{
+      @include flex-row-nowrap;
+
+    }
+&__icon{
+  font-size: 6rem;
+
+}
+&__info{
+
+  height: 70%;
+ align-items: flex-start;
+ font-size: 1.4rem;
+ justify-content: center;
+
+ & p{
+   flex-basis: 30%;
+ }
+   }
+   &__social{
+     flex-basis: 40%;
+    font-size: 1.5rem;
+  }
+
+}
+
 }
 
 //SPECIAL DEVICES

@@ -97,9 +97,11 @@
     transform: translateY(-50%) skew(-45deg);
   }
 }
+
+
 }
 
-@media #{$landscape-smartphones}{
+@media #{$landscape-smartphones}, #{$portrait-huge} {
 .ourTeam{
   height: 85vh;
   margin: 40px auto 0 auto;
@@ -135,4 +137,29 @@
     }
   
 }
+}
+
+@media #{$landscape-large}{
+  .ourTeam{
+    &__box{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media #{$portrait-large}{
+  .ourTeam{
+    &__box{
+      font-size: 2rem;
+    }
+  }
+}
+
+@media #{$portrait-huge}{
+  .ourTeam{
+    &__box{
+      height: 60vh;
+      width: 50vh;
+    }
+  }
 }

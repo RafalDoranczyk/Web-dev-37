@@ -2,13 +2,16 @@
 
 const owlButtonLeft = document.querySelector('.ourTeam__owlButton--left')
 const owlButtonRight = document.querySelector('.ourTeam__owlButton--right')
-
+const ch = document.documentElement.clientHeight;
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 const owlWork = $('.ourWork__galleryBox');
 jQuery(document).ready(function ($) {
   var alterClass = function () {
     var ww = document.body.clientWidth;
-    if (ww > 519) {
+
+    console.log(ch);
+    console.log(ww);
+    if (ww > 519 && ch < 800) {
 
       owlWork.owlCarousel({
         loop: true,
@@ -45,6 +48,7 @@ $('.ourTeam__owlButton--left').click(function () {
   owl.trigger('prev.owl.carousel', [300]);
 })
 
+
 owl.owlCarousel({
   loop: true,
   items: 1,
@@ -53,7 +57,7 @@ owl.owlCarousel({
   dots: false,
   nav: false,
   responsive: {
-    500: {
+    769: {
       items: 3,
     },
   }
