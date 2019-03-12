@@ -19,41 +19,39 @@
 <body>
 
   <div class="wrapper">
-    <header class="header">
-
+    <header id="home" class="header">
       <nav class="header__nav">
-
         <h1 class="header__logo">
-          <a href="#">Agency</a>
+          <a class="home" href="#">Agency</a>
         </h1>
-
         <ul class="header__list header__list--mobile header__list--desktop">
           <li class="header__list__item">
-            <a href="#">home</a>
+            <a class="home" href="#">home</a>
           </li>
           <li class="header__list__item">
-            <a href="#">about us</a>
+            <a class="aboutUs" href="#">about us</a>
           </li>
           <li class="header__list__item">
-            <a href="#">team</a>
+            <a class="team" href="#">team</a>
           </li>
           <li class="header__list__item">
-            <a href="#">services</a>
+            <a class="ourServices" href="#">services</a>
           </li>
           <li class="header__list__item">
-            <a href="#">process</a>
+            <a class="process" href="#">process</a>
           </li>
           <li class="header__list__item">
-            <a href="#">clients</a>
+            <a class="ourClients" href="#">clients</a>
           </li>
           <li class="header__list__item">
-            <a href="#">work</a>
+            <a class="work" href="#">work</a>
           </li>
 
         </ul>
         <div class="header__icons">
-          <i class="header__icon fas fa-search"></i>
-          <i class="header__icon fab fa-facebook-f"></i>
+          <a> <i class="header__icon fas fa-search"> </i> </a>
+          <a target="_blank" href="https://www.facebook.com/"> <i class="header__icon fab fa-facebook-f"> </i></a>
+
         </div>
       </nav>
       <img class="header__model" src="assets/model.png" alt="">
@@ -61,7 +59,7 @@
       <button class="header__button">read more</button>
     </header>
 
-    <section class="about">
+    <section id="aboutUs" class="about">
 
       <div class="about__contentBox">
         <h2 class="about__heading">Who we are</h2>
@@ -77,7 +75,7 @@
       </div>
     </section>
 
-    <section class="services">
+    <section id="ourServices" class="services">
       <h2 class="services__heading"> What we do</h2>
       <div class="services__box">
         <div class="services__item">
@@ -138,7 +136,7 @@
 
     </section>
 
-    <section class="ourWork">
+    <section id="process" class="ourWork">
       <div class="ourWork__contentBox">
         <h2 class="ourWork__heading">How we work</h2>
         <p class="ourWork__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
@@ -169,7 +167,7 @@
       </div>
     </section>
 
-    <section class="ourTeam">
+    <section id="team" class="ourTeam">
       <h2 class="ourTeam__heading">Our creative team</h2>
 
       <div class="ourTeam__owlCarousel owl-carousel">
@@ -193,7 +191,7 @@
       <div class="ourTeam__owlButton ourTeam__owlButton--left"></div>
     </section>
 
-    <section class="clients">
+    <section id="ourClients" class="clients">
       <h2 class="clients__heading">What client says</h2>
       <div class="clients__box">
         <div class="clients__image">
@@ -215,7 +213,7 @@
       </div>
     </section>
 
-    <footer class="footer">
+    <footer id="work" class="footer">
       <h2 class="footer__heading">Get in touch</h2>
 
       <div class="footer__box">
@@ -278,7 +276,7 @@
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="scripts/owl.carousel.min.js"></script>
   <script src="scripts/script.js"></script>
 </body>

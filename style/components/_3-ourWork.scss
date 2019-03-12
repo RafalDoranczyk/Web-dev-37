@@ -2,6 +2,8 @@
 margin-top: 40px;
 position: relative;
 
+
+
 &::before{
   top: 20%;
   left: 0;
@@ -103,7 +105,7 @@ position: relative;
 
 @media #{$landscape-smartphones}{
   .ourWork{
-    
+  
     margin-top: 80px;
     @include flex-row-nowrap;
     justify-content: space-between;
@@ -208,7 +210,7 @@ position: relative;
    }
  }
 //SPECIAL DEVICES
-@media #{$landsacpe-iPhoneX-only}{
+@media #{$landscape-iPhoneX-only}{
   .ourWork{
     height: 80vh;
     &__description{

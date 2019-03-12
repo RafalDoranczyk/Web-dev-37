@@ -109,6 +109,10 @@
     transform: translateX(100%);
     transition: .4s;
     font-size: 1rem;
+    cursor: pointer;
+    & > a{
+      color: $white;
+    }
     }
 
     &__icon{
@@ -329,7 +333,7 @@ height: 85vh;
   }
   }
 }
-@media #{$landsacpe-iPhoneX-only}{
+@media #{$landscape-iPhoneX-only}{
   .header{
     &__model{
       top: 10%;

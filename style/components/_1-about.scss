@@ -163,6 +163,7 @@ justify-content: space-around;
 
 
 //SPECIAL DEVICES
+
 @media #{$landscape-iPhone6-only}{
   .about{
     height: 80vh;
@@ -172,13 +173,14 @@ justify-content: space-around;
   }
 }
 
+
 @media #{$portrait-iPhoneX-only}{
  .about{
    margin-top: 40px;
  }
 }
 
-@media #{$landsacpe-iPhoneX-only}{
+@media #{$landscape-iPhoneX-only}{
  .about{
    margin-top: 120px;
    &__description{
@@ -188,4 +190,9 @@ justify-content: space-around;
      align-content: space-around;
    }
  }
+}
+@media #{$portrait-iPhone6-only}{
+  .about{
+        margin-top: 80px;
+  }
 }

@@ -263,14 +263,17 @@
       font-size: 1.4rem;
     }
     &__copyright{
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      @include flex-row-nowrap;
+      width: 70%;
     }
   }
 
  }
 
- @media #{$landsacpe-iPhoneX-only}{
+ @media #{$landscape-iPhoneX-only}{
   .footer{
     margin-top: 80px;
+
   }
    }
