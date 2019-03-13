@@ -760,7 +760,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .about {
     height: 50vh;
   }
@@ -1093,7 +1093,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .services {
     margin: 80px;
   }
@@ -1518,7 +1518,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .ourWork__description {
     width: 70%;
     margin: 60px 0;
@@ -1674,7 +1674,7 @@ body {
           transform: translateY(-50%) skew(-45deg);
 }
 
-@media only screen and (min-width: 321px) and (orientation: landscape), only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-width: 321px) and (orientation: landscape), only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .ourTeam {
     height: 85vh;
     margin: 40px auto 0 auto;
@@ -1724,7 +1724,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .ourTeam__box {
     height: 60vh;
     width: 50vh;
@@ -2007,7 +2007,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .clients {
     height: 60vh;
   }
@@ -2412,7 +2412,7 @@ body {
   }
 }
 
-@media only screen and (min-device-width: 1000px) and (min-device-height: 1000px) and (orientation: portrait) {
+@media only screen and (min-device-width: 768px) and (min-device-height: 1000px) and (orientation: portrait) {
   .footer__social {
     font-size: 3.4rem;
   }

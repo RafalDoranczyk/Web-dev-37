@@ -118,7 +118,7 @@ owlTeam.owlCarousel({
   dots: false,
   nav: false,
   responsive: {
-    769: {
+    500: {
       items: 3,
     },
   }
